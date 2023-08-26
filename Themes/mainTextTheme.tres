@@ -1,0 +1,61 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://c6qj4gpqpe15"]
+
+[ext_resource type="StyleBox" uid="uid://daxr3pfl04oy0" path="res://Scenes/hover.tres" id="1_nuteo"]
+[ext_resource type="FontFile" uid="uid://dhkt28cwcslm6" path="res://Fonts/SpicySushi-L3MnE.ttf" id="1_vtx5e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6hb0m"]
+bg_color = Color(0.211765, 0.372549, 0.498039, 1)
+border_width_bottom = 5
+border_color = Color(0.239216, 0.411765, 0.54902, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_size = 4
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bmjqj"]
+bg_color = Color(0.211765, 0.372549, 0.498039, 1)
+border_width_bottom = 5
+border_color = Color(0.239216, 0.411765, 0.54902, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_size = 4
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v5e2y"]
+content_margin_top = 19.0
+content_margin_bottom = 9.0
+bg_color = Color(0.356863, 0.560784, 0.72549, 1)
+border_width_bottom = 5
+border_color = Color(0.239216, 0.411765, 0.54902, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+shadow_size = 4
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k1g4t"]
+bg_color = Color(0.211765, 0.372549, 0.498039, 1)
+border_width_bottom = 5
+border_color = Color(0.239216, 0.411765, 0.54902, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_size = 4
+shadow_offset = Vector2(2, 2)
+
+[resource]
+default_font = ExtResource("1_vtx5e")
+default_font_size = 50
+Button/styles/disabled = SubResource("StyleBoxFlat_6hb0m")
+Button/styles/focus = SubResource("StyleBoxFlat_bmjqj")
+Button/styles/hover = ExtResource("1_nuteo")
+Button/styles/normal = SubResource("StyleBoxFlat_v5e2y")
+Button/styles/pressed = SubResource("StyleBoxFlat_k1g4t")
