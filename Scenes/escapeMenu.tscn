@@ -1,0 +1,170 @@
+[gd_scene load_steps=12 format=3 uid="uid://df0rryg3830u5"]
+
+[ext_resource type="Script" path="res://Scenes/escapeMenu.gd" id="1_onj00"]
+[ext_resource type="Material" uid="uid://bk4plx6v2l41" path="res://Scenes/testShader.tres" id="2_i3ii5"]
+[ext_resource type="Texture2D" uid="uid://bnwrl8ochd3pv" path="res://Resources/backgrounds/makee-me-a-background--in-a-kind-of-fantasy--make-it-simple-and-vector--make-it-only-sky-but-in-diffrent-universes--dont-include-mountins-or-anything--just-sky (9).png" id="3_681ki"]
+[ext_resource type="Theme" uid="uid://c6qj4gpqpe15" path="res://Themes/mainTextTheme.tres" id="3_iv4p2"]
+[ext_resource type="FontFile" uid="uid://dhkt28cwcslm6" path="res://Fonts/SpicySushi-L3MnE.ttf" id="4_jnpm0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6hb0m"]
+bg_color = Color(0.32549, 0.521569, 0.682353, 0.780392)
+border_width_bottom = 5
+border_color = Color(0.239216, 0.411765, 0.54902, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_size = 4
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bmjqj"]
+bg_color = Color(0.356863, 0.560784, 0.72549, 1)
+border_width_bottom = 5
+border_color = Color(0.239216, 0.411765, 0.54902, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_size = 4
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fqsvw"]
+bg_color = Color(0.431373, 0.635294, 0.8, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 5
+border_color = Color(0.239216, 0.411765, 0.54902, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_size = 4
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wf7na"]
+content_margin_top = 19.0
+content_margin_bottom = 9.0
+bg_color = Color(0.356863, 0.560784, 0.72549, 1)
+border_width_bottom = 5
+border_color = Color(0.239216, 0.411765, 0.54902, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 4
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k1g4t"]
+bg_color = Color(0.211765, 0.372549, 0.498039, 1)
+border_width_bottom = 5
+border_color = Color(0.239216, 0.411765, 0.54902, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_size = 4
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="Theme" id="Theme_vvier"]
+default_font = ExtResource("4_jnpm0")
+default_font_size = 80
+Button/styles/disabled = SubResource("StyleBoxFlat_6hb0m")
+Button/styles/focus = SubResource("StyleBoxFlat_bmjqj")
+Button/styles/hover = SubResource("StyleBoxFlat_fqsvw")
+Button/styles/normal = SubResource("StyleBoxFlat_wf7na")
+Button/styles/pressed = SubResource("StyleBoxFlat_k1g4t")
+
+[node name="escapeMenu" type="Control"]
+light_mask = 32
+visibility_layer = 32
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_onj00")
+
+[node name="Background" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundWalpaper" type="TextureRect" parent="Background"]
+material = ExtResource("2_i3ii5")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -94.0
+offset_top = -53.0
+offset_right = 121.0
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_681ki")
+expand_mode = 3
+
+[node name="BackgroundBlur" type="ColorRect" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.729412, 0.439216, 0.309804, 0.741176)
+
+[node name="saveMenu" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="top" type="VBoxContainer" parent="saveMenu"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 163.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="saveMenu/top"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme = SubResource("Theme_vvier")
+text = "Goodbye!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="saveMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 226.0
+offset_top = 297.0
+offset_right = -226.0
+offset_bottom = -169.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="save&quit" type="Button" parent="saveMenu/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_iv4p2")
+text = "save & quit"
+
+[node name="resume" type="Button" parent="saveMenu/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_iv4p2")
+text = "resume"
+
+[connection signal="pressed" from="saveMenu/VBoxContainer/save&quit" to="." method="_on_savequit_pressed"]
+[connection signal="pressed" from="saveMenu/VBoxContainer/resume" to="." method="_on_resume_pressed"]

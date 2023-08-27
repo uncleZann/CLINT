@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=3 uid="uid://dh0re7p8yrb1p"]
+
+[ext_resource type="Texture2D" uid="uid://ycio6t6e4bvc" path="res://Resources/grass.png" id="1_834t7"]
+[ext_resource type="Script" path="res://Scenes/terrain_line_generator.gd" id="1_gk3kn"]
+[ext_resource type="Texture2D" uid="uid://cnm01qd2osubd" path="res://Resources/ground.png" id="3_jgspw"]
+
+[sub_resource type="Shader" id="Shader_npnlq"]
+code = "shader_type canvas_item;
+uniform sampler2D distortionTexture;
+uniform vec3 modulateColor;
+
+void fragment() {
+	if (UV.y > 0.5) {
+	vec2 distortedUv = UV + texture(distortionTexture, UV).r * sin(TIME) * 0.02;
+	vec4 screenColor = texture(TEXTURE, distortedUv);
+	COLOR = screenColor;
+	}
+	else {
+		vec2 distortedUv = UV + texture(distortionTexture, UV).r * 0.11;
+		vec4 screenColor = texture(TEXTURE, distortedUv);
+		COLOR = screenColor;
+	}
+	COLOR.rgb = modulateColor;
+}
+"
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_id2qn"]
+frequency = 0.0001
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_h1t2n"]
+width = 300
+height = 300
+generate_mipmaps = false
+noise = SubResource("FastNoiseLite_id2qn")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2eoyw"]
+shader = SubResource("Shader_npnlq")
+shader_parameter/modulateColor = Vector3(0, 24, 200)
+shader_parameter/distortionTexture = SubResource("NoiseTexture2D_h1t2n")
+
+[node name="TerrainLineGenerator" type="Line2D"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_2eoyw")
+position = Vector2(-622, -564)
+points = PackedVector2Array(-2143, 983, -191, 419, 1, 375, 317, 451, 370, 210, 763, 336, 1110, 285, 1235, 347, 1297, 483)
+width = 250.0
+texture = ExtResource("1_834t7")
+texture_mode = 1
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+script = ExtResource("1_gk3kn")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+show_behind_parent = true
+texture_repeat = 2
+texture = ExtResource("3_jgspw")
+texture_scale = Vector2(4, 4)
+polygon = PackedVector2Array(-399, -243, -789, -59, -765, 262, -37, 219, -103, -118)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]

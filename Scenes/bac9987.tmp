@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=3 uid="uid://cbukpul0e76k8"]
+
+[ext_resource type="Texture2D" uid="uid://b3601vkyy3c71" path="res://Resources/backgrounds/1.png" id="1_47kj0"]
+[ext_resource type="Script" path="res://Scenes/background.gd" id="1_ya66v"]
+[ext_resource type="Texture2D" uid="uid://dk3q118orcbnh" path="res://Resources/backgrounds/2.png" id="2_8a1h8"]
+[ext_resource type="Texture2D" uid="uid://bacuw8w2e7c7i" path="res://Resources/backgrounds/3.png" id="3_galvk"]
+
+[node name="Background" type="CanvasLayer"]
+layer = -100
+script = ExtResource("1_ya66v")
+
+[node name="AllOfThem" type="Marker2D" parent="."]
+show_behind_parent = true
+z_index = 10
+position = Vector2(600, 300)
+scale = Vector2(0.8, 0.8)
+
+[node name="Wallpaper" type="Sprite2D" parent="AllOfThem"]
+visible = false
+position = Vector2(-28.125, 18.75)
+scale = Vector2(0.949707, 0.949707)
+texture = ExtResource("1_47kj0")
+
+[node name="Wallpaper2" type="Sprite2D" parent="AllOfThem"]
+visible = false
+texture = ExtResource("2_8a1h8")
+
+[node name="Wallpaper3" type="Sprite2D" parent="AllOfThem"]
+visible = false
+texture = ExtResource("3_galvk")
+
+[node name="FloorColor" type="Marker2D" parent="."]
+position = Vector2(570, 558)
+
+[node name="mark" type="Marker2D" parent="FloorColor"]
+position = Vector2(-460, 14)
+
+[node name="mark2" type="Marker2D" parent="FloorColor"]
+position = Vector2(-293, 34)
+
+[node name="mark3" type="Marker2D" parent="FloorColor"]
+position = Vector2(-152, -2)
+
+[node name="mark4" type="Marker2D" parent="FloorColor"]
+position = Vector2(101, 53)
+
+[node name="mark5" type="Marker2D" parent="FloorColor"]
+position = Vector2(187, 23)
+
+[node name="mark6" type="Marker2D" parent="FloorColor"]
+position = Vector2(303, -32)
+
+[node name="mark7" type="Marker2D" parent="FloorColor"]
+position = Vector2(438, 54)
+
+[node name="mark8" type="Marker2D" parent="FloorColor"]
+position = Vector2(467, -3)
+
+[node name="mark9" type="Marker2D" parent="FloorColor"]
+position = Vector2(305, 42)
+
+[node name="mark10" type="Marker2D" parent="FloorColor"]
+position = Vector2(134, -40)
+
+[node name="mark11" type="Marker2D" parent="FloorColor"]
+position = Vector2(-110, -40)
+
+[node name="mark12" type="Marker2D" parent="FloorColor"]
+position = Vector2(-235, -40)
+
+[node name="mark13" type="Marker2D" parent="FloorColor"]
+position = Vector2(-385, -26)
+
+[node name="mark14" type="Marker2D" parent="FloorColor"]
+position = Vector2(-385, -26)

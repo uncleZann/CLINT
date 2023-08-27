@@ -1,0 +1,744 @@
+[gd_resource type="Resource" script_class="allOfTheDecisions" load_steps=2 format=3 uid="uid://du0xbx8omyikd"]
+
+[ext_resource type="Script" path="res://Scripts/allOfTheDecisions.gd" id="1_nhh7d"]
+
+[resource]
+script = ExtResource("1_nhh7d")
+decisionsDict = {
+1: {
+"CONSEQUENCE1": {
+"consequenceText": "The stranger is really greatfull, and you have to wait",
+"reputation": "+",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "The stranger is scared, and [b]You leave him all alone[/b]",
+"reputation": "-",
+"time": "+"
+},
+"DEC1": "Him",
+"DEC2": "You",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "You fall in a dark, deep hole filled with weird creatures and lost of oddly rainbowed moss, luckly your linux phone notified the rescue crew and they will come soon, walking around, you found another lost person, Do you want the crew to: 
+
+[i]Rescue him first[/i] or [i]rescue you first[/i]"
+},
+2: {
+"CONSEQUENCE1": {
+"consequenceText": "Your friend is really greatfull, and you stay home",
+"reputation": true,
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "[b]You leave your friend[/b] for the party",
+"reputation": false,
+"time": "+"
+},
+"DEC1": "Help friend",
+"DEC2": "Party",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "Your friend asked you to help him study for his exam, the night you are going to a party, Do you: 
+
+[i]help your friend[/i] or [i]go to the party?[/i]"
+},
+3: {
+"CONSEQUENCE1": {
+"consequenceText": "You uncover a hidden treasure and earn the gratitude of the trapped explorer inside.",
+"reputation": "+",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You wait for help, and the trapped explorer is grateful for your decision.",
+"reputation": "+",
+"time": "+"
+},
+"DEC1": "Enter temple",
+"DEC2": "Call for help",
+"KEYWORDS": ["dark", "mystery"],
+"STORYDECISION": "While hiking in a remote forest, you stumble upon an ancient, mysterious-looking temple. You hear a faint cry for help from inside. Do you: 
+
+[i]Enter the temple to investigate[/i] or [i]call for help and wait outside[/i]?"
+},
+4: {
+"CONSEQUENCE1": {
+"consequenceText": "You have an incredible adventure and make new friends but disappoint your best friend.",
+"reputation": "-",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You celebrate your friend's special day but miss out on the expedition.",
+"reputation": "+",
+"time": "-"
+},
+"DEC1": "Go on expedition",
+"DEC2": "Attend wedding",
+"KEYWORDS": ["dark", "adventure"],
+"STORYDECISION": "You're offered the opportunity to join a risky but exciting expedition to explore an uncharted island. However, it clashes with your best friend's wedding. Do you: 
+
+[i]Go on the expedition[/i] or [i]attend your friend's wedding[/i]?"
+},
+5: {
+"CONSEQUENCE1": {
+"consequenceText": "You have an enchanting adventure but face the consequences at work.",
+"reputation": "-",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You prioritize your work and miss the magical world beyond the portal.",
+"reputation": "+",
+"time": "+"
+},
+"DEC1": "Step through portal",
+"DEC2": "Prepare for presentation",
+"KEYWORDS": ["dark", "fantasy"],
+"STORYDECISION": "You stumble upon a magical portal that promises to take you to a fantastical realm full of wonders. However, you have an important work presentation tomorrow. Do you: 
+
+[i]Step through the portal[/i] or [i]return to prepare for your presentation[/i]?"
+},
+6: {
+"CONSEQUENCE1": {
+"consequenceText": "You form a tight-knit community and increase your chances of survival.",
+"reputation": "+",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You rely on your independence but miss out on the benefits of a group.",
+"reputation": "-",
+"time": "+"
+},
+"DEC1": "Join the group",
+"DEC2": "Remain independent",
+"KEYWORDS": ["dark", "survival"],
+"STORYDECISION": "You're stranded on a deserted island with limited supplies. You come across a group of strangers who are also stranded. Do you: 
+
+[i]Join the group for safety[/i] or [i]remain independent[/i]?"
+},
+7: {
+"CONSEQUENCE1": {
+"consequenceText": "You save your teammate's life but risk running out of oxygen yourself.",
+"reputation": "+",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You prioritize your own survival and leave your teammate unconscious.",
+"reputation": "-",
+"time": "-"
+},
+"DEC1": "Revive teammate",
+"DEC2": "Conserve oxygen",
+"KEYWORDS": ["dark", "space"],
+"STORYDECISION": "You're on a space mission to explore an unknown planet. Your oxygen levels are running critically low, and your teammate is unconscious. Do you: 
+
+[i]Use your oxygen to revive your teammate[/i] or [i]conserve your oxygen for your own survival[/i]?"
+},
+8: {
+"CONSEQUENCE1": {
+"consequenceText": "You witness a momentous event but disappoint your child.",
+"reputation": "-",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You prioritize your child's happiness and miss the historic event.",
+"reputation": "+",
+"time": "+"
+},
+"DEC1": "Attend historic event",
+"DEC2": "Attend child's play",
+"KEYWORDS": ["dark", "historic"],
+"STORYDECISION": "You have the chance to witness a historic event, but it means missing your child's first school play. Do you: 
+
+[i]Attend the historic event[/i] or [i]be present at your child's play[/i]?"
+},
+9: {
+"CONSEQUENCE1": {
+"consequenceText": "You have valuable information but constantly look over your shoulder.",
+"reputation": "-",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You do the right thing but become a target for those involved.",
+"reputation": "+",
+"time": "-"
+},
+"DEC1": "Keep the data",
+"DEC2": "Report it",
+"KEYWORDS": ["dark", "cyberpunk"],
+"STORYDECISION": "In a dystopian future, you discover a cache of valuable data that could expose corruption, but it's illegal to possess. Do you: 
+
+[i]Keep the data and risk the consequences[/i] or [i]report it to the authorities[/i]?"
+},
+10: {
+"CONSEQUENCE1": {
+"consequenceText": "You stop the crime but reveal your powers to the world.",
+"reputation": "-",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You stay hidden, and the authorities handle the situation.",
+"reputation": "+",
+"time": "+"
+},
+"DEC1": "Intervene",
+"DEC2": "Call authorities",
+"KEYWORDS": ["dark", "superhero"],
+"STORYDECISION": "You possess a superpower and witness a crime happening. Do you: 
+
+[i]Intervene and stop the crime[/i] or [i]stay hidden and call the authorities[/i]?"
+},
+11: {
+"CONSEQUENCE1": {
+"consequenceText": "You share your secret, and the room lights up, revealing an exit.",
+"reputation": "+",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You choose silence, and the room remains dark, leaving you with uncertainty.",
+"reputation": "-",
+"time": "-"
+},
+"DEC1": "Reveal secret",
+"DEC2": "Stay silent",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "You wake up in a pitch-dark room, tied to a chair. A mysterious voice offers you a choice: reveal your deepest secret or stay in the dark. Do you: 
+
+[i]Reveal your secret[/i] or [i]stay silent[/i]?"
+},
+12: {
+"CONSEQUENCE1": {
+"consequenceText": "You gain protection but have to navigate the leader's brutality.",
+"reputation": "-",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You maintain your independence but face greater dangers on your own.",
+"reputation": "+",
+"time": "-"
+},
+"DEC1": "Join survivors",
+"DEC2": "Go it alone",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "In a post-apocalyptic world, you discover a group of survivors in a hidden underground shelter. They ask you to join them, but you know their leader is ruthless. Do you: 
+
+[i]Join the survivors for safety[/i] or [i]go it alone[/i]?"
+},
+13: {
+"CONSEQUENCE1": {
+"consequenceText": "You discover the mansion's dark secrets but manage to escape with your life.",
+"reputation": "+",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You flee in terror, leaving the cries behind, haunted by the experience.",
+"reputation": "-",
+"time": "-"
+},
+"DEC1": "Investigate cries",
+"DEC2": "Run away",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "You encounter a haunted mansion on a foggy night. Inside, you hear cries for help. Do you: 
+
+[i]Investigate the cries[/i] or [i]run away in fear[/i]?"
+},
+14: {
+"CONSEQUENCE1": {
+"consequenceText": "You wield immense power but become increasingly isolated and unhappy.",
+"reputation": "-",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You prioritize your happiness and let go of the dangerous artifact.",
+"reputation": "+",
+"time": "-"
+},
+"DEC1": "Use artifact's power",
+"DEC2": "Discard artifact",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "You find a mysterious artifact that grants incredible power but at a dark price - it consumes your happiness. Do you: 
+
+[i]Use the artifact's power[/i] or [i]discard it to protect your happiness[/i]?"
+},
+15: {
+"CONSEQUENCE1": {
+"consequenceText": "You escape the dream world with the figure's guidance but feel a loss of self.",
+"reputation": "-",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You struggle to find your way out but maintain your identity.",
+"reputation": "+",
+"time": "-"
+},
+"DEC1": "Accept help and give up identity",
+"DEC2": "Reject offer and find own way",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "You're trapped in a nightmarish dream world with no clear way out. A sinister figure offers to guide you, but they demand a piece of your identity in return. Do you: 
+
+[i]Accept their help and give up a piece of your identity[/i] or [i]reject their offer and try to find your own way out[/i]?"
+},
+16: {
+"CONSEQUENCE1": {
+"consequenceText": "Your wish is granted, but you're bound by a sinister pact.",
+"reputation": "-",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You resist temptation and avoid the book's curse.",
+"reputation": "+",
+"time": "-"
+},
+"DEC1": "Make dark wish",
+"DEC2": "Leave book behind",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "You stumble upon a cursed book with the power to grant dark wishes. It offers you one wish, but using it may come at a terrible cost. Do you: 
+
+[i]Make a dark wish[/i] or [i]resist the temptation and leave the book behind[/i]?"
+},
+17: {
+"CONSEQUENCE1": {
+"consequenceText": "You become a part of a secretive society with great power but face isolation from your previous life.",
+"reputation": "-",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You remain in the light, preserving your existing life but missing out on the society's secrets.",
+"reputation": "+",
+"time": "-"
+},
+"DEC1": "Join the society",
+"DEC2": "Stay in the light",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "You discover a hidden society that thrives in the shadows, with secrets that could change the world. They invite you to join, but it means leaving behind your current life. Do you: 
+
+[i]Embrace the shadows and join the society[/i] or [i]reject their offer and stay in the light[/i]?"
+},
+18: {
+"CONSEQUENCE1": {
+"consequenceText": "You achieve your desire but become bound by the dark magic, forever changed.",
+"reputation": "-",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You resist temptation and avoid the dark magic's grasp.",
+"reputation": "+",
+"time": "-"
+},
+"DEC1": "Bargain with dark magic",
+"DEC2": "Reject offer and walk away",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "You gain access to a forbidden realm of dark magic. It offers you the chance to achieve your deepest desire, but the price is your soul. Do you: 
+
+[i]Bargain with the dark magic[/i] or [i]reject the offer and walk away[/i]?"
+},
+19: {
+"CONSEQUENCE1": {
+"consequenceText": "You confront your fears and gain strength but carry the scars of the experience.",
+"reputation": "+",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You avoid the mirror, keeping your sanity intact but missing the opportunity for growth.",
+"reputation": "-",
+"time": "-"
+},
+"DEC1": "Confront fears",
+"DEC2": "Walk away",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "You come across a cursed mirror that shows you your darkest fears. It offers you a chance to confront them but at the risk of losing your sanity. Do you: 
+
+[i]Confront your darkest fears[/i] or [i]walk away from the mirror[/i]?"
+},
+20: {
+"CONSEQUENCE1": {
+"consequenceText": "You gain forbidden knowledge but become entangled in the cult's dark agenda.",
+"reputation": "-",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You remain independent, searching for truth without the cult's influence.",
+"reputation": "+",
+"time": "-"
+},
+"DEC1": "Join cult for enlightenment",
+"DEC2": "Seek truth on own",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "You encounter a cult that promises to reveal the ultimate truth about existence. Joining requires a dark initiation ritual. Do you: 
+
+[i]Join the cult for enlightenment[/i] or [i]reject their offer and seek truth on your own[/i]?"
+},
+21: {
+"CONSEQUENCE1": {
+"consequenceText": "You face your fears and escape the realm, but the experience leaves you scarred.",
+"reputation": "+",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You search for another way out, avoiding your fears but prolonging your stay in the dark realm.",
+"reputation": "-",
+"time": "-"
+},
+"DEC1": "Confront fears head-on",
+"DEC2": "Find another way out",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "You find yourself in a realm where your deepest fears materialize. Confronting them may offer a way out, but it's a terrifying ordeal. Do you: 
+
+[i]Confront your fears head-on[/i] or [i]try to find another way out without facing them[/i]?"
+},
+22: {
+"CONSEQUENCE1": {
+"consequenceText": "You cooperate with the scientists, uncovering dark secrets but gaining their favor.",
+"reputation": "-",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You attempt to escape, facing danger and the unknown.",
+"reputation": "+",
+"time": "-"
+},
+"DEC1": "Participate in experiments",
+"DEC2": "Try to escape",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "You wake up in a sinister laboratory with no memory of how you got there. A voice over the intercom offers you two choices: [i]Participate in their experiments[/i] or [i]try to escape[/i]."
+},
+23: {
+"CONSEQUENCE1": {
+"consequenceText": "You intervene and earn the gratitude of the victim, but you become a target of the syndicate.",
+"reputation": "-",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You avoid trouble but feel guilt for not helping the victim.",
+"reputation": "+",
+"time": "-"
+},
+"DEC1": "Intervene and help victim",
+"DEC2": "Walk away to avoid trouble",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "In a city controlled by a powerful crime syndicate, you witness a mugging in a dark alley. Do you: 
+
+[i]Intervene and help the victim[/i] or [i]walk away to avoid trouble[/i]?"
+},
+24: {
+"CONSEQUENCE1": {
+"consequenceText": "You uncover shocking secrets but strain your relationships with those you read.",
+"reputation": "-",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You preserve your relationships but remain in the dark about hidden truths.",
+"reputation": "+",
+"time": "-"
+},
+"DEC1": "Use mask to uncover secrets",
+"DEC2": "Leave it untouched",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "You find a mysterious, enchanted mask that grants you the ability to read people's darkest thoughts. Using it could reveal hidden truths but may destroy relationships. Do you: 
+
+[i]Use the mask to uncover secrets[/i] or [i]leave it untouched[/i]?"
+},
+25: {
+"CONSEQUENCE1": {
+"consequenceText": "You gain knowledge from the past but sacrifice your vitality.",
+"reputation": "-",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You preserve your life force but miss the opportunity to learn from history.",
+"reputation": "+",
+"time": "-"
+},
+"DEC1": "Activate painting to learn from past",
+"DEC2": "Avoid its dark power",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "You discover a cursed painting that can bring the past to life for a short time, but it drains your life force. Do you: 
+
+[i]Activate the painting to learn from the past[/i] or [i]avoid its dark power[/i]?"
+},
+26: {
+"CONSEQUENCE1": {
+"consequenceText": "You gain power but become entangled in the organization's dark agenda.",
+"reputation": "-",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You maintain your moral integrity but miss out on the opportunity for influence.",
+"reputation": "+",
+"time": "-"
+},
+"DEC1": "Accept position of power",
+"DEC2": "Reject their offer",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "You are offered a position of power in a shadowy organization with unknown goals. Accepting could grant you influence but might involve morally questionable actions. Do you: 
+
+[i]Accept the position of power[/i] or [i]reject their offer[/i]?"
+},
+27: {
+"CONSEQUENCE1": {
+"consequenceText": "You gain great power but risk unleashing dark forces upon the world.",
+"reputation": "-",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You protect the world from the dark tome's influence but miss out on its power.",
+"reputation": "+",
+"time": "-"
+},
+"DEC1": "Study forbidden spells",
+"DEC2": "Seal tome away forever",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "You stumble upon an ancient tome of forbidden spells that could give you immense power. However, using it may unleash dark forces. Do you: 
+
+[i]Study the forbidden spells[/i] or [i]seal the tome away forever[/i]?"
+},
+28: {
+"CONSEQUENCE1": {
+"consequenceText": "You face your darkest fears and gain resilience, but the experience is traumatizing.",
+"reputation": "+",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You avoid the alternate reality, maintaining your sanity but missing a chance for growth.",
+"reputation": "-",
+"time": "-"
+},
+"DEC1": "Enter portal and confront fears",
+"DEC2": "Stay in your own reality",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "You discover a portal to an alternate reality where your darkest fears have already come true. You can enter to confront them, but it's a harrowing experience. Do you: 
+
+[i]Enter the portal and confront your fears[/i] or [i]stay in your own reality[/i]?"
+},
+29: {
+"CONSEQUENCE1": {
+"consequenceText": "You fulfill your desires but suffer the tragic loss of a loved one.",
+"reputation": "-",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You protect your loved ones but sacrifice your desires.",
+"reputation": "+",
+"time": "-"
+},
+"DEC1": "Use amulet for desires",
+"DEC2": "Destroy it to protect loved ones",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "You come across a cursed amulet that can grant your deepest desires but at a terrible cost - the loss of a loved one. Do you: 
+
+[i]Use the amulet for your desires[/i] or [i]destroy it to protect your loved ones[/i]?"
+},
+30: {
+"CONSEQUENCE1": {
+"consequenceText": "You gain immense power but become a servant of the dark force, endangering the world.",
+"reputation": "-",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You resist the dark force's influence and become a beacon of hope against it.",
+"reputation": "+",
+"time": "-"
+},
+"DEC1": "Pledge loyalty to dark force",
+"DEC2": "Reject offer and oppose it",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "You encounter a sentient, dark force that offers you unparalleled power in exchange for your loyalty. Do you: 
+
+[i]Pledge your loyalty to the dark force[/i] or [i]reject its offer and oppose it[/i]?"
+},
+31: {
+"CONSEQUENCE1": {
+"consequenceText": "You gain dark powers but become part of a malevolent society with dangerous ambitions.",
+"reputation": "-",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You reject the invitation and maintain your moral integrity, but miss out on extraordinary abilities.",
+"reputation": "+",
+"time": "-"
+},
+"DEC1": "Embrace dark rituals for power",
+"DEC2": "Reject their invitation",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "You stumble upon a hidden society that practices dark rituals to gain power. They invite you to join, promising incredible abilities but at a grave cost. Do you: 
+
+[i]Embrace the dark rituals for power[/i] or [i]reject their invitation[/i]?"
+},
+32: {
+"CONSEQUENCE1": {
+"consequenceText": "You gain the ability to control minds but create chaos and suffering in the process.",
+"reputation": "-",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You prevent the misuse of the cursed ring but miss out on its power.",
+"reputation": "+",
+"time": "-"
+},
+"DEC1": "Use ring to control minds",
+"DEC2": "Bury it to prevent misuse",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "You find a cursed ring that offers the power to control minds, but using it could lead to tragedy. Do you: 
+
+[i]Use the ring to control minds[/i] or [i]bury it deep to prevent its misuse[/i]?"
+},
+33: {
+"CONSEQUENCE1": {
+"consequenceText": "You warn the world, but your actions cause widespread fear and chaos.",
+"reputation": "-",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You keep the prophecy secret, avoiding panic but potentially leaving the world unprepared.",
+"reputation": "+",
+"time": "-"
+},
+"DEC1": "Share the prophecy with the world",
+"DEC2": "Keep it secret to prevent panic",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "You discover an ancient prophecy that predicts a dark and destructive event. Do you: 
+
+[i]Share the prophecy with the world[/i] or [i]keep it secret to prevent panic[/i]?"
+},
+34: {
+"CONSEQUENCE1": {
+"consequenceText": "You defeat your greatest enemy but become corrupted by the cursed weapon's malevolence.",
+"reputation": "-",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You protect your soul but struggle to overcome your greatest enemy without the weapon's power.",
+"reputation": "+",
+"time": "-"
+},
+"DEC1": "Wield the cursed weapon",
+"DEC2": "Reject its power to protect your soul",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "You come across a cursed weapon that can defeat your greatest enemy, but using it may cost you your soul. Do you: 
+
+[i]Wield the cursed weapon[/i] or [i]reject its power to protect your soul[/i]?"
+},
+35: {
+"CONSEQUENCE1": {
+"consequenceText": "You achieve your goals with the network's help but compromise your moral principles.",
+"reputation": "-",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You maintain your moral integrity but face greater challenges in achieving your goals.",
+"reputation": "+",
+"time": "-"
+},
+"DEC1": "Accept their assistance",
+"DEC2": "Reject their offer",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "You uncover an underground network of spies and assassins who offer to help you achieve your goals but at the cost of your moral principles. Do you: 
+
+[i]Accept their assistance[/i] or [i]reject their offer[/i]?"
+},
+36: {
+"CONSEQUENCE1": {
+"consequenceText": "You uncover the mansion's dark secrets but risk encountering supernatural phenomena.",
+"reputation": "-",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You avoid the mansion, staying safe but missing out on its mysteries.",
+"reputation": "+",
+"time": "-"
+},
+"DEC1": "Explore mansion to uncover secrets",
+"DEC2": "Avoid it to stay safe",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "You discover an eerie, abandoned mansion rumored to be haunted. Do you: 
+
+[i]Explore the mansion to uncover its secrets[/i] or [i]avoid it to stay safe[/i]?"
+},
+37: {
+"CONSEQUENCE1": {
+"consequenceText": "You expose the official and fight corruption but put your loved ones at risk.",
+"reputation": "-",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You protect your loved ones but allow corruption to persist.",
+"reputation": "+",
+"time": "-"
+},
+"DEC1": "Expose official to fight corruption",
+"DEC2": "Protect loved ones by staying silent",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "You have the chance to expose a corrupt government official but doing so may put your loved ones in danger. Do you: 
+
+[i]Expose the official to fight corruption[/i] or [i]protect your loved ones by staying silent[/i]?"
+},
+38: {
+"CONSEQUENCE1": {
+"consequenceText": "You gain immense wealth but witness misfortune befall those around you.",
+"reputation": "-",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You protect others from harm but miss out on the opportunity for wealth.",
+"reputation": "+",
+"time": "-"
+},
+"DEC1": "Use cursed object for wealth",
+"DEC2": "Leave it untouched to avoid harm",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "You stumble upon a cursed object that can grant you immense wealth, but it may bring misfortune to others. Do you: 
+
+[i]Use the cursed object for wealth[/i] or [i]leave it untouched to avoid harm[/i]?"
+},
+39: {
+"CONSEQUENCE1": {
+"consequenceText": "You explore the alternate dimension, facing danger but uncovering valuable discoveries.",
+"reputation": "+",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You protect your world by sealing the portal but miss the opportunity for discovery.",
+"reputation": "-",
+"time": "-"
+},
+"DEC1": "Enter portal to explore",
+"DEC2": "Seal portal to protect your world",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "You find a mysterious portal to an alternate dimension filled with dark creatures. Exploring it may yield valuable discoveries but is highly dangerous. Do you: 
+
+[i]Enter the portal to explore[/i] or [i]seal the portal to protect your world[/i]?"
+},
+40: {
+"CONSEQUENCE1": {
+"consequenceText": "You gain immortality but bear the weight of the sacrificed life on your conscience.",
+"reputation": "-",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You protect a life but miss out on the chance for immortality.",
+"reputation": "+",
+"time": "-"
+},
+"DEC1": "Perform ritual for immortality",
+"DEC2": "Reject ritual to protect a life",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "You discover a hidden chamber with a forbidden ritual that could grant you immortality, but it requires a human sacrifice. Do you: 
+
+[i]Perform the ritual for immortality[/i] or [i]reject the ritual to protect a life[/i]?"
+},
+41: {
+"CONSEQUENCE1": {
+"consequenceText": "You grasp your desires from the mirror but face unforeseen consequences.",
+"reputation": "-",
+"time": "-"
+},
+"CONSEQUENCE2": {
+"consequenceText": "You protect yourself from potential harm but miss the opportunity to fulfill your desires.",
+"reputation": "+",
+"time": "-"
+},
+"DEC1": "Reach for desires in the mirror",
+"DEC2": "Walk away to protect yourself",
+"KEYWORDS": ["dark"],
+"STORYDECISION": "You encounter a cursed mirror that reflects your deepest desires, but obtaining them may lead to your downfall. Do you: 
+
+[i]Reach for your desires in the mirror[/i] or [i]walk away to protect yourself[/i]?"
+}
+}

@@ -15,6 +15,7 @@
               "state": {
                 "file": "ChatGpt.md",
                 "mode": "source",
+                "backlinks": true,
                 "source": false
               }
             }
@@ -103,7 +104,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Consuqence Resoults.md",
+                "file": "ChatGpt.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -177,7 +178,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Consuqence Resoults.md",
+                "file": "ChatGpt.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -194,7 +195,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Consuqence Resoults.md",
+                "file": "ChatGpt.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -217,7 +218,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Consuqence Resoults.md"
+                "file": "ChatGpt.md"
               }
             }
           }
@@ -240,9 +241,9 @@
   },
   "active": "68224517ba1a1868",
   "lastOpenFiles": [
-    "StoriesInJSON.md",
     "Decisions Generation.md",
-    "Consuqence Resoults.md",
-    "ChatGpt.md"
+    "StoriesInJSON.md",
+    "ChatGpt.md",
+    "Consuqence Resoults.md"
   ]
 }

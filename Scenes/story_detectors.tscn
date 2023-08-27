@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dj52dwovnjv2d"]
+
+[ext_resource type="Script" path="res://Scenes/story_detectors.gd" id="1_rs7rm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hbgav"]
+size = Vector2(20, 815)
+
+[node name="storyDetectors" type="Node2D"]
+script = ExtResource("1_rs7rm")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -273.5)
+shape = SubResource("RectangleShape2D_hbgav")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered" flags=6]

@@ -1,0 +1,405 @@
+[gd_scene load_steps=34 format=3 uid="uid://cbukpul0e76k8"]
+
+[ext_resource type="Texture2D" uid="uid://b3601vkyy3c71" path="res://Resources/backgrounds/1.png" id="1_47kj0"]
+[ext_resource type="Script" path="res://Scenes/background.gd" id="1_ya66v"]
+[ext_resource type="Texture2D" uid="uid://bacuw8w2e7c7i" path="res://Resources/backgrounds/3.png" id="3_galvk"]
+[ext_resource type="Texture2D" uid="uid://dj2pjhetfv7kx" path="res://Resources/backgrounds/makee-me-a-background--in-a-kind-of-fantasy--make-it-simple-and-vector--make-it-only-sky-but-in-diffrent-universes--dont-include-mountins-or-anything--just-sky (1).png" id="5_404w8"]
+[ext_resource type="Texture2D" uid="uid://cqolc8bmx4015" path="res://Resources/Blur.jpg" id="5_yx0i2"]
+[ext_resource type="Texture2D" uid="uid://dpil5gcldb5is" path="res://Resources/backgrounds/makee-me-a-background--in-a-kind-of-fantasy--make-it-simple-and-vector--make-it-only-sky-but-in-diffrent-universes--dont-include-mountins-or-anything--just-sky (2).png" id="6_mpjmv"]
+[ext_resource type="Texture2D" uid="uid://cvyb531id882n" path="res://Resources/LightOverlay.png" id="6_yj20g"]
+[ext_resource type="Theme" uid="uid://c6qj4gpqpe15" path="res://Themes/mainTextTheme.tres" id="7_8x02q"]
+[ext_resource type="Texture2D" uid="uid://c2rx7gjh304mb" path="res://Resources/backgrounds/makee-me-a-background--in-a-kind-of-fantasy--make-it-simple-and-vector--make-it-only-sky-but-in-diffrent-universes--dont-include-mountins-or-anything--just-sky (3).png" id="7_rj7aq"]
+[ext_resource type="Texture2D" uid="uid://blskf5kiqw6lr" path="res://Resources/backgrounds/makee-me-a-background--in-a-kind-of-fantasy--make-it-simple-and-vector--make-it-only-sky-but-in-diffrent-universes--dont-include-mountins-or-anything--just-sky (4).png" id="8_nex5o"]
+[ext_resource type="Texture2D" uid="uid://cbjxcdw8tdt7n" path="res://Resources/backgrounds/makee-me-a-background--in-a-kind-of-fantasy--make-it-simple-and-vector--make-it-only-sky-but-in-diffrent-universes--dont-include-mountins-or-anything--just-sky (5).png" id="9_7m74m"]
+[ext_resource type="Texture2D" uid="uid://chla1vney43nr" path="res://Resources/backgrounds/makee-me-a-background--in-a-kind-of-fantasy--make-it-simple-and-vector--make-it-only-sky-but-in-diffrent-universes--dont-include-mountins-or-anything--just-sky (6).png" id="10_qlxgy"]
+[ext_resource type="Texture2D" uid="uid://c5fu7sibgeo8m" path="res://Resources/backgrounds/makee-me-a-background--in-a-kind-of-fantasy--make-it-simple-and-vector--make-it-only-sky-but-in-diffrent-universes--dont-include-mountins-or-anything--just-sky (7).png" id="11_6gpr5"]
+[ext_resource type="Texture2D" uid="uid://js1b36nbj62n" path="res://Resources/backgrounds/makee-me-a-background--in-a-kind-of-fantasy--make-it-simple-and-vector--make-it-only-sky-but-in-diffrent-universes--dont-include-mountins-or-anything--just-sky (8).png" id="12_ug7a5"]
+[ext_resource type="Texture2D" uid="uid://bnwrl8ochd3pv" path="res://Resources/backgrounds/makee-me-a-background--in-a-kind-of-fantasy--make-it-simple-and-vector--make-it-only-sky-but-in-diffrent-universes--dont-include-mountins-or-anything--just-sky (9).png" id="13_lwmaf"]
+[ext_resource type="Texture2D" uid="uid://dw8w2p2qi0y7h" path="res://Resources/backgrounds/makee-me-a-background--in-a-kind-of-fantasy--make-it-simple-and-vector--make-it-only-sky-but-in-diffrent-universes--dont-include-mountins-or-anything--just-sky (10).png" id="14_4477g"]
+[ext_resource type="Texture2D" uid="uid://bcq37vy5vyf24" path="res://Resources/backgrounds/makee-me-a-background--in-a-kind-of-fantasy--make-it-simple-and-vector--make-it-only-sky-but-in-diffrent-universes--dont-include-mountins-or-anything--just-sky-0 (1).png" id="15_go00d"]
+[ext_resource type="Texture2D" uid="uid://dh5hha4pxg6aq" path="res://Resources/backgrounds/makee-me-a-background--in-a-kind-of-fantasy--make-it-simple-and-vector--make-it-only-sky-but-in-diffrent-universes--dont-include-mountins-or-anything--just-sky-1 (1).png" id="16_6357g"]
+[ext_resource type="Texture2D" uid="uid://bftii4ms8gq1b" path="res://Resources/backgrounds/makee-me-a-background--in-a-kind-of-fantasy--make-it-simple-and-vector--make-it-only-sky-but-in-diffrent-universes--dont-include-mountins-or-anything--just-sky-1.png" id="17_loaxa"]
+[ext_resource type="Texture2D" uid="uid://cardtmh27apk3" path="res://Resources/backgrounds/makee-me-a-background--in-a-kind-of-fantasy--make-it-simple-and-vector--make-it-only-sky-but-in-diffrent-universes--dont-include-mountins-or-anything--just-sky-2 (1).png" id="18_1mva0"]
+[ext_resource type="Texture2D" uid="uid://b3u4xdqu5h5s6" path="res://Resources/backgrounds/makee-me-a-background--in-a-kind-of-fantasy--make-it-simple-and-vector--make-it-only-sky-but-in-diffrent-universes--dont-include-mountins-or-anything--just-sky-2.png" id="19_cr52l"]
+[ext_resource type="Texture2D" uid="uid://do4r8wiece1a6" path="res://Resources/backgrounds/makee-me-a-background--in-a-kind-of-fantasy--make-it-simple-and-vector--make-it-only-sky-but-in-diffrent-universes--dont-include-mountins-or-anything--just-sky-3 (1).png" id="20_4atgl"]
+[ext_resource type="Texture2D" uid="uid://cwd82h41m7kah" path="res://Resources/backgrounds/makee-me-a-background--in-a-kind-of-fantasy--make-it-simple-and-vector--make-it-only-sky-but-in-diffrent-universes--dont-include-mountins-or-anything--just-sky-3.png" id="21_k7x8k"]
+[ext_resource type="Texture2D" uid="uid://y2hadfrdtyvr" path="res://Resources/backgrounds/makee-me-a-background--in-a-kind-of-fantasy--make-it-simple-and-vector--make-it-only-sky-but-in-diffrent-universes--dont-include-mountins-or-anything--just-sky.png" id="22_6j41l"]
+
+[sub_resource type="Shader" id="Shader_vmtkx"]
+code = "shader_type canvas_item;
+uniform sampler2D distortionTexture;
+
+
+void fragment() {
+	vec2 distortedUv = UV + texture(distortionTexture, UV).r * 0.1;
+	vec4 screenColor = texture(TEXTURE, distortedUv);
+	COLOR = screenColor;
+}"
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_af84w"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_mmpwj"]
+noise = SubResource("FastNoiseLite_af84w")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7ulam"]
+shader = SubResource("Shader_vmtkx")
+shader_parameter/distortionTexture = SubResource("NoiseTexture2D_mmpwj")
+
+[sub_resource type="Gradient" id="Gradient_iy8ud"]
+offsets = PackedFloat32Array(0, 0.577778, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_hthp6"]
+gradient = SubResource("Gradient_iy8ud")
+
+[sub_resource type="Curve" id="Curve_2njve"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.060241, 0.621053), 0.0, 0.0, 0, 0, Vector2(0.253012, 0.747368), 0.0, 0.0, 0, 0, Vector2(0.554217, 0.905263), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="CurveTexture" id="CurveTexture_s0pp5"]
+curve = SubResource("Curve_2njve")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_smeps"]
+emission_shape = 3
+emission_box_extents = Vector3(650, 1, 1)
+gravity = Vector3(0, 20, 0)
+angular_velocity_min = 0.5
+angular_velocity_max = 1.0
+linear_accel_min = 6.32
+linear_accel_max = 23.16
+radial_accel_min = 8.42
+radial_accel_max = 42.1
+tangential_accel_min = 13.59
+tangential_accel_max = 83.06
+damping_min = 0.3
+damping_max = 1.0
+angle_min = 0.4
+angle_max = 1.0
+scale_min = 0.01
+scale_max = 0.03
+scale_curve = SubResource("CurveTexture_s0pp5")
+color = Color(1, 1, 1, 0.490196)
+color_ramp = SubResource("GradientTexture1D_hthp6")
+turbulence_enabled = true
+
+[node name="Background" type="CanvasLayer"]
+layer = -100
+script = ExtResource("1_ya66v")
+
+[node name="AllOfThem" type="Control" parent="."]
+material = SubResource("ShaderMaterial_7ulam")
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="AllOfThem"]
+visible = false
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_galvk")
+expand_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="AllOfThem"]
+visible = false
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_47kj0")
+expand_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="AllOfThem"]
+visible = false
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("21_k7x8k")
+expand_mode = 5
+
+[node name="TextureRect4" type="TextureRect" parent="AllOfThem"]
+visible = false
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -60.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_404w8")
+expand_mode = 5
+
+[node name="TextureRect5" type="TextureRect" parent="AllOfThem"]
+visible = false
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_mpjmv")
+expand_mode = 5
+
+[node name="TextureRect6" type="TextureRect" parent="AllOfThem"]
+visible = false
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_rj7aq")
+expand_mode = 5
+
+[node name="TextureRect7" type="TextureRect" parent="AllOfThem"]
+visible = false
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_nex5o")
+expand_mode = 5
+
+[node name="TextureRect8" type="TextureRect" parent="AllOfThem"]
+visible = false
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_7m74m")
+expand_mode = 5
+
+[node name="TextureRect9" type="TextureRect" parent="AllOfThem"]
+visible = false
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_qlxgy")
+expand_mode = 5
+
+[node name="TextureRect10" type="TextureRect" parent="AllOfThem"]
+visible = false
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_6gpr5")
+expand_mode = 5
+
+[node name="TextureRect11" type="TextureRect" parent="AllOfThem"]
+visible = false
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_ug7a5")
+expand_mode = 5
+
+[node name="TextureRect12" type="TextureRect" parent="AllOfThem"]
+visible = false
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_lwmaf")
+expand_mode = 5
+
+[node name="TextureRect13" type="TextureRect" parent="AllOfThem"]
+visible = false
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_4477g")
+expand_mode = 5
+
+[node name="TextureRect14" type="TextureRect" parent="AllOfThem"]
+visible = false
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("15_go00d")
+expand_mode = 5
+
+[node name="TextureRect15" type="TextureRect" parent="AllOfThem"]
+visible = false
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("16_6357g")
+expand_mode = 5
+
+[node name="TextureRect16" type="TextureRect" parent="AllOfThem"]
+visible = false
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("17_loaxa")
+expand_mode = 5
+
+[node name="TextureRect17" type="TextureRect" parent="AllOfThem"]
+visible = false
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("18_1mva0")
+expand_mode = 5
+
+[node name="TextureRect18" type="TextureRect" parent="AllOfThem"]
+visible = false
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("19_cr52l")
+expand_mode = 5
+
+[node name="TextureRect19" type="TextureRect" parent="AllOfThem"]
+visible = false
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_4atgl")
+expand_mode = 5
+
+[node name="TextureRect20" type="TextureRect" parent="AllOfThem"]
+visible = false
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("21_k7x8k")
+expand_mode = 5
+
+[node name="TextureRect21" type="TextureRect" parent="AllOfThem"]
+visible = false
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("22_6j41l")
+expand_mode = 5
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+self_modulate = Color(0, 0, 0, 0.709804)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -60.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_yx0i2")
+expand_mode = 5
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+visible = false
+position = Vector2(590, -609)
+amount = 1000
+lifetime = 3.0
+texture = ExtResource("6_yj20g")
+emission_shape = 3
+emission_rect_extents = Vector2(600, 10)
+gravity = Vector2(0, 400)
+scale_amount_min = 0.1
+color = Color(0, 0.619608, 0.619608, 0.145098)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1, 0.572549)
+position = Vector2(529, -40)
+amount = 300
+process_material = SubResource("ParticleProcessMaterial_smeps")
+texture = ExtResource("6_yj20g")
+lifetime = 7.0
+randomness = 1.0
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FpsCounter" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 599.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("7_8x02q")
+theme_override_font_sizes/font_size = 30
+text = " 200"
+horizontal_alignment = 1

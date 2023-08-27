@@ -1,0 +1,381 @@
+[gd_scene load_steps=23 format=3 uid="uid://dqe8mi0po860w"]
+
+[ext_resource type="Script" path="res://Scenes/foreground.gd" id="1_nwfox"]
+[ext_resource type="FontFile" uid="uid://dhkt28cwcslm6" path="res://Fonts/SpicySushi-L3MnE.ttf" id="2_imq8d"]
+[ext_resource type="AudioStream" uid="uid://bqh2v610yn0sp" path="res://Audio/heartbeat-21649.mp3" id="2_k8e6y"]
+[ext_resource type="Script" path="res://Scenes/StartEndAnimations.gd" id="2_q5vtd"]
+[ext_resource type="StyleBox" uid="uid://daxr3pfl04oy0" path="res://Scenes/hover.tres" id="3_bbiwk"]
+[ext_resource type="FontFile" uid="uid://cxtcx7fhknxo6" path="res://Fonts/extreme.ttf" id="3_g0hhs"]
+[ext_resource type="Theme" uid="uid://c6qj4gpqpe15" path="res://Themes/mainTextTheme.tres" id="3_yiai3"]
+
+[sub_resource type="Animation" id="Animation_1bxyf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Keywords/Dark:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Keywords/Bright:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_677iq"]
+resource_name = "bright"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Keywords/Bright:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Keywords/Bright:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_5q5qu"]
+resource_name = "dark"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Keywords/Dark:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Keywords/Dark:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioPlayers/heartbeat:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ues67"]
+_data = {
+"RESET": SubResource("Animation_1bxyf"),
+"bright": SubResource("Animation_677iq"),
+"dark": SubResource("Animation_5q5qu")
+}
+
+[sub_resource type="Theme" id="Theme_q1pfp"]
+default_font = ExtResource("3_g0hhs")
+default_font_size = 35
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6hb0m"]
+bg_color = Color(0.211765, 0.372549, 0.498039, 1)
+border_width_bottom = 5
+border_color = Color(0.239216, 0.411765, 0.54902, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_size = 4
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bmjqj"]
+bg_color = Color(0.211765, 0.372549, 0.498039, 1)
+border_width_bottom = 5
+border_color = Color(0.239216, 0.411765, 0.54902, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_size = 4
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_frfhe"]
+content_margin_top = 19.0
+content_margin_bottom = 9.0
+bg_color = Color(0.356863, 0.560784, 0.72549, 1)
+border_width_bottom = 5
+border_color = Color(0.239216, 0.411765, 0.54902, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+shadow_size = 4
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k1g4t"]
+bg_color = Color(0.211765, 0.372549, 0.498039, 1)
+border_width_bottom = 5
+border_color = Color(0.239216, 0.411765, 0.54902, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_size = 4
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="Theme" id="Theme_wfocm"]
+default_font = ExtResource("2_imq8d")
+default_font_size = 50
+Button/styles/disabled = SubResource("StyleBoxFlat_6hb0m")
+Button/styles/focus = SubResource("StyleBoxFlat_bmjqj")
+Button/styles/hover = ExtResource("3_bbiwk")
+Button/styles/normal = SubResource("StyleBoxFlat_frfhe")
+Button/styles/pressed = SubResource("StyleBoxFlat_k1g4t")
+
+[sub_resource type="Animation" id="Animation_elm5a"]
+resource_name = "light"
+length = 151.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StartEndAnimations")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["bright", true],
+"method": &"playAnimation"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_jw1o7"]
+resource_name = "brightb"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StartEndAnimations")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["bright", false],
+"method": &"playAnimation"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_4lbif"]
+resource_name = "dark"
+length = 151.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StartEndAnimations")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["dark", true],
+"method": &"playAnimation"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioPlayers/heartbeat:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_i7xgb"]
+resource_name = "darkb"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StartEndAnimations")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["dark", false],
+"method": &"playAnimation"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b61jc"]
+_data = {
+"bright": SubResource("Animation_elm5a"),
+"brightb": SubResource("Animation_jw1o7"),
+"dark": SubResource("Animation_4lbif"),
+"darkb": SubResource("Animation_i7xgb")
+}
+
+[node name="Foreground" type="Node2D"]
+script = ExtResource("1_nwfox")
+
+[node name="StartEndAnimations" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ues67")
+}
+script = ExtResource("2_q5vtd")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Keywords" type="Node" parent="CanvasLayer"]
+
+[node name="Dark" type="ColorRect" parent="CanvasLayer/Keywords"]
+visible = false
+modulate = Color(1, 1, 1, 0.976471)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Bright" type="ColorRect" parent="CanvasLayer/Keywords"]
+visible = false
+modulate = Color(1, 1, 1, 0.976471)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Story" type="Node" parent="CanvasLayer"]
+
+[node name="Control" type="Control" parent="CanvasLayer/Story"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Story/Control"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 39.0
+offset_top = 36.0
+offset_right = -37.0
+offset_bottom = -333.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_q1pfp")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 5
+theme_override_constants/outline_size = 5
+theme_override_fonts/bold_font = ExtResource("3_g0hhs")
+theme_override_fonts/italics_font = ExtResource("3_g0hhs")
+theme_override_font_sizes/bold_font_size = 40
+theme_override_font_sizes/italics_font_size = 30
+bbcode_enabled = true
+visible_characters = 0
+visible_characters_behavior = 1
+visible_ratio = 0.0
+
+[node name="Decisions" type="Node" parent="CanvasLayer"]
+
+[node name="Control" type="Control" parent="CanvasLayer/Decisions"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 328.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Decisions/Control"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -10.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="option1" type="Button" parent="CanvasLayer/Decisions/Control/HBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_wfocm")
+text = "option1"
+
+[node name="option2" type="Button" parent="CanvasLayer/Decisions/Control/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_yiai3")
+text = "option2"
+
+[node name="next_char" type="Timer" parent="CanvasLayer/Decisions"]
+wait_time = 0.05
+
+[node name="AudioPlayers" type="Node" parent="."]
+
+[node name="heartbeat" type="AudioStreamPlayer2D" parent="AudioPlayers"]
+stream = ExtResource("2_k8e6y")
+volume_db = 5.0
+max_distance = 2e+06
+
+[node name="FullAnimations" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_b61jc")
+}
+
+[connection signal="pressed" from="CanvasLayer/Decisions/Control/HBoxContainer/option1" to="." method="_on_option_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/Decisions/Control/HBoxContainer/option2" to="." method="_on_option_2_pressed"]
+[connection signal="timeout" from="CanvasLayer/Decisions/next_char" to="." method="_on_next_char_timeout"]
