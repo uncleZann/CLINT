@@ -16,7 +16,7 @@ decisionsDict = {
     },
    2: {
         "KEYWORDS": ["fast", "loud", "hot"],
-        "STORYDECISION": "You're driving a fast car on a hot summer day, and the engine starts making a loud, alarming noise. Do you [i]pull over immediately[/i] or [i]keep driving[/i]?",
+        "STORYDECISION": "You're driving a fast car on a hot summer day, and the engine starts making a loud, alarming noise. Do you \n\n[i]pull over immediately[/i] or [i]keep driving[/i]?",
         "DEC1" : "Pull over immediately",
         "DEC2" : "Keep driving",
         "CONSEQUENCE1" : {"consequenceText": "You pull over in time, preventing major engine damage, and gain knowledge about car maintenance.", "reputation": true, "time": false, "knowledge": true},
@@ -24,7 +24,7 @@ decisionsDict = {
     },
    3: {
         "KEYWORDS": ["soft", "slow", "cold"],
-        "STORYDECISION": "You're at a slow-paced, cold winter party where the music is soft and people are reserved. Do you try to [i]liven up the party[/i] or [i]enjoy the calm atmosphere[/i]?",
+        "STORYDECISION": "You're at a slow-paced, cold winter party where the music is soft and people are reserved. Do you try to \n\n[i]liven up the party[/i] or [i]enjoy the calm atmosphere[/i]?",
         "DEC1" : "Liven up the party",
         "DEC2" : "Enjoy the calm atmosphere",
         "CONSEQUENCE1" : {"consequenceText": "You liven up the party with your dance moves and become the life of the event, gaining reputation and social connections.", "reputation": true, "time": false, "socialconnections": true},
@@ -32,7 +32,7 @@ decisionsDict = {
     },
    4: {
         "KEYWORDS": ["rough", "wet", "hard"],
-        "STORYDECISION": "You're hiking in rough terrain, and suddenly, it starts raining heavily, making the path wet and slippery. Do you [i]continue hiking cautiously[/i] or [i]turn back[/i]?",
+        "STORYDECISION": "You're hiking in rough terrain, and suddenly, it starts raining heavily, making the path wet and slippery. Do you \n\n[i]continue hiking cautiously[/i] or [i]turn back[/i]?",
         "DEC1" : "Continue hiking cautiously",
         "DEC2" : "Turn back",
         "CONSEQUENCE1" : {"consequenceText": "You continue hiking cautiously, improving your fitness level and gaining knowledge about hiking in adverse conditions.", "reputation": true, "time": true, "fitnesslevel": true, "knowledge": true},
@@ -40,7 +40,7 @@ decisionsDict = {
     },
    5: {
         "KEYWORDS": ["smooth", "clear", "bright"],
-        "STORYDECISION": "You're at an art gallery, and you come across a smooth, clear canvas with a bright, captivating painting. Do you [i]analyze the artwork deeply[/i] or [i]move on[/i]?",
+        "STORYDECISION": "You're at an art gallery, and you come across a smooth, clear canvas with a bright, captivating painting. Do you \n\n[i]analyze the artwork deeply[/i] or [i]move on[/i]?",
         "DEC1" : "Analyze the artwork deeply",
         "DEC2" : "Move on",
         "CONSEQUENCE1" : {"consequenceText": "You analyze the artwork deeply, enhancing your knowledge of art and gaining social connections with fellow art enthusiasts.", "reputation": true, "time": false, "knowledge": true, "socialconnections": true},
@@ -48,7 +48,7 @@ decisionsDict = {
     },
    6: {
         "KEYWORDS": ["heavy", "fast", "loud"],
-        "STORYDECISION": "You're at a busy airport, and your luggage is heavy. You have a flight to catch, but there's a long line at the check-in counter. Do you [i]wait in line with your heavy luggage[/i] or [i]try to find a quicker solution[/i]?",
+        "STORYDECISION": "You're at a busy airport, and your luggage is heavy. You have a flight to catch, but there's a long line at the check-in counter. Do you \n\n[i]wait in line with your heavy luggage[/i] or [i]try to find a quicker solution[/i]?",
         "DEC1" : "Wait in line with your heavy luggage",
         "DEC2" : "Try to find a quicker solution",
         "CONSEQUENCE1" : {"consequenceText": "You wait in line, building patience and social connections with fellow travelers who appreciate your courtesy.", "reputation": true, "time": true, "socialconnections": true},
@@ -56,7 +56,7 @@ decisionsDict = {
     },
    7: {
         "KEYWORDS": ["clear", "bright", "vibrant"],
-        "STORYDECISION": "You're in a city known for its vibrant street art. There's a clear, bright mural that catches your eye. Do you [i]take a photo[/i] or [i]keep walking[/i]?",
+        "STORYDECISION": "You're in a city known for its vibrant street art. There's a clear, bright mural that catches your eye. Do you \n\n[i]take a photo[/i] or [i]keep walking[/i]?",
         "DEC1" : "Take a photo",
         "DEC2" : "Keep walking",
         "CONSEQUENCE1" : {"consequenceText": "You take a photo of the mural, gaining knowledge about street art and sharing it on social media, increasing your reputation and social connections.", "reputation": true, "time": false, "knowledge": true, "socialconnections": true},
@@ -64,7 +64,7 @@ decisionsDict = {
     },
    8: {
         "KEYWORDS": ["soft", "slow", "quiet"],
-        "STORYDECISION": "You're at a meditation retreat in a quiet, serene forest. The guide suggests a slow, soft breathing exercise. Do you [i]participate in the exercise[/i] or [i]skip it[/i]?",
+        "STORYDECISION": "You're at a meditation retreat in a quiet, serene forest. The guide suggests a slow, soft breathing exercise. Do you \n\n[i]participate in the exercise[/i] or [i]skip it[/i]?",
         "DEC1" : "Participate in the exercise",
         "DEC2" : "Skip it",
         "CONSEQUENCE1" : {"consequenceText": "You participate in the exercise, improving your health and mindfulness, gaining knowledge about meditation, and forming social connections with fellow participants.", "reputation": true, "time": false, "health": true, "knowledge": true, "socialconnections": true},
@@ -72,7 +72,7 @@ decisionsDict = {
     },
    9: {
         "KEYWORDS": ["hot", "loud", "fast"],
-        "STORYDECISION": "You're at a loud, fast-paced party, and the room gets uncomfortably hot. Do you [i]stay and dance[/i] or [i]step out for some fresh air[/i]?",
+        "STORYDECISION": "You're at a loud, fast-paced party, and the room gets uncomfortably hot. Do you \n\n[i]stay and dance[/i] or [i]step out for some fresh air[/i]?",
         "DEC1" : "Stay and dance",
         "DEC2" : "Step out for some fresh air",
         "CONSEQUENCE1" : {"consequenceText": "You stay and dance, having a great time, improving your fitness level, and making new social connections.", "reputation": true, "time": false, "fitnesslevel": true, "socialconnections": true},
@@ -80,7 +80,7 @@ decisionsDict = {
     },
    10: {
         "KEYWORDS": ["clear", "bright", "quiet"],
-        "STORYDECISION": "You're in a quiet, bright library with clear windows overlooking a peaceful garden. Do you [i]read a book[/i] or [i]sit quietly and enjoy the view[/i]?",
+        "STORYDECISION": "You're in a quiet, bright library with clear windows overlooking a peaceful garden. Do you \n\n[i]read a book[/i] or [i]sit quietly and enjoy the view[/i]?",
         "DEC1" : "Read a book",
         "DEC2" : "Sit quietly and enjoy the view",
         "CONSEQUENCE1" : {"consequenceText": "You choose to read a book, gaining knowledge and enhancing your reputation as a studious individual.", "reputation": true, "time": false, "knowledge": true},
@@ -88,7 +88,7 @@ decisionsDict = {
     },
    11: {
         "KEYWORDS": ["hot", "fast", "loud"],
-        "STORYDECISION": "You're at a bustling amusement park on a hot summer day. The roller coaster line is long, and the ride is known for its fast, loud thrills. Do you [i]wait in line[/i] or [i]explore other attractions[/i]?",
+        "STORYDECISION": "You're at a bustling amusement park on a hot summer day. The roller coaster line is long, and the ride is known for its fast, loud thrills. Do you \n\n[i]wait in line[/i] or [i]explore other attractions[/i]?",
         "DEC1" : "Wait in line",
         "DEC2" : "Explore other attractions",
         "CONSEQUENCE1" : {"consequenceText": "You wait in line for the roller coaster, enjoying the ride's excitement. Your fitness level improves, and you make social connections with fellow thrill-seekers.", "reputation": true, "time": false, "fitnesslevel": true, "socialconnections": true},
@@ -96,7 +96,7 @@ decisionsDict = {
     },
    12: {
         "KEYWORDS": ["smooth", "spacious", "bright"],
-        "STORYDECISION": "You're redecorating your living room. You have a spacious area with bright, natural light. Would you prefer to have [i]smooth, modern furniture[/i] or [i]classic, vintage pieces[/i]?",
+        "STORYDECISION": "You're redecorating your living room. You have a spacious area with bright, natural light. Would you prefer to have \n\n[i]smooth, modern furniture[/i] or [i]classic, vintage pieces[/i]?",
         "DEC1" : "Smooth, modern furniture",
         "DEC2" : "Classic, vintage pieces",
         "CONSEQUENCE1" : {"consequenceText": "You choose modern furniture, giving your living room a sleek and contemporary feel. Your reputation improves as friends admire your style.", "reputation": true, "time": false},
@@ -104,7 +104,7 @@ decisionsDict = {
     },
    13: {
         "KEYWORDS": ["quiet", "slow", "cold"],
-        "STORYDECISION": "You're at a remote cabin in the mountains during winter. The night is quiet, and the temperature is cold. Do you [i]sit by the fire and read a book[/i] or [i]venture outside for a silent walk[/i]?",
+        "STORYDECISION": "You're at a remote cabin in the mountains during winter. The night is quiet, and the temperature is cold. Do you \n\n[i]sit by the fire and read a book[/i] or [i]venture outside for a silent walk[/i]?",
         "DEC1" : "Sit by the fire and read a book",
         "DEC2" : "Venture outside for a silent walk",
         "CONSEQUENCE1" : {"consequenceText": "You cozy up by the fire, reading a book and gaining knowledge. Your health improves due to the warmth.", "reputation": true, "time": false, "knowledge": true, "health": true},
@@ -112,7 +112,7 @@ decisionsDict = {
     },
    14: {
         "KEYWORDS": ["clear", "fast", "bright"],
-        "STORYDECISION": "You're in a hurry to catch a flight, and you're running late. The sky is clear and bright, but you notice a fast-moving line at airport security. Do you [i]join the line[/i] or [i]explore other options[/i]?",
+        "STORYDECISION": "You're in a hurry to catch a flight, and you're running late. The sky is clear and bright, but you notice a fast-moving line at airport security. Do you \n\n[i]join the line[/i] or [i]explore other options[/i]?",
         "DEC1" : "Join the line",
         "DEC2" : "Explore other options",
         "CONSEQUENCE1" : {"consequenceText": "You join the line, saving time and making your flight. Your reputation improves for punctuality.", "reputation": true, "time": true},
@@ -120,7 +120,7 @@ decisionsDict = {
     },
    15: {
         "KEYWORDS": ["soft", "quiet", "smooth"],
-        "STORYDECISION": "You're at a spa for a relaxing day. The atmosphere is soft, quiet, and the masseuse uses smooth techniques. Do you request a [i]deep-tissue massage[/i] or a [i]gentle, Swedish massage[/i]?",
+        "STORYDECISION": "You're at a spa for a relaxing day. The atmosphere is soft, quiet, and the masseuse uses smooth techniques. Do you request a \n\n[i]deep-tissue massage[/i] or a [i]gentle, Swedish massage[/i]?",
         "DEC1" : "Deep-tissue massage",
         "DEC2" : "Gentle, Swedish massage",
         "CONSEQUENCE1" : {"consequenceText": "You opt for a deep-tissue massage, relieving muscle tension but experiencing slight discomfort. Your fitness level improves as you feel invigorated.", "reputation": true, "time": false, "fitnesslevel": true},
@@ -128,7 +128,7 @@ decisionsDict = {
     },
    16: {
         "KEYWORDS": ["clear", "vibrant", "bright"],
-        "STORYDECISION": "You're at a photography exhibition, and you encounter a bright, vibrant display of nature's beauty. Do you [i]take your time and appreciate each photo[/i] or [i]quickly move through the exhibit[/i]?",
+        "STORYDECISION": "You're at a photography exhibition, and you encounter a bright, vibrant display of nature's beauty. Do you \n\n[i]take your time and appreciate each photo[/i] or [i]quickly move through the exhibit[/i]?",
         "DEC1" : "Take your time and appreciate each photo",
         "DEC2" : "Quickly move through the exhibit",
         "CONSEQUENCE1" : {"consequenceText": "You immerse yourself in the photos, gaining knowledge about photography and forming social connections with fellow art enthusiasts.", "reputation": true, "time": false, "knowledge": true, "socialconnections": true},
@@ -136,7 +136,7 @@ decisionsDict = {
     },
    17: {
         "KEYWORDS": ["cold", "slow", "quiet"],
-        "STORYDECISION": "You're on a winter camping trip, and the night is cold and quiet. Do you [i]stay inside your warm tent[/i] or [i]venture out to stargaze[/i]?",
+        "STORYDECISION": "You're on a winter camping trip, and the night is cold and quiet. Do you \n\n[i]stay inside your warm tent[/i] or [i]venture out to stargaze[/i]?",
         "DEC1" : "Stay inside your warm tent",
         "DEC2" : "Venture out to stargaze",
         "CONSEQUENCE1" : {"consequenceText": "You stay inside your warm tent, enjoying comfort and health benefits. Your reputation improves for wise choices.", "reputation": true, "time": false, "health": true},
@@ -144,7 +144,7 @@ decisionsDict = {
     },
    18: {
         "KEYWORDS": ["rough", "slow", "dim"],
-        "STORYDECISION": "You're at a challenging puzzle competition in a dimly lit room. The puzzle is rough and slow to solve. Do you [i]persevere and solve it[/i] or [i]quit and join a different activity[/i]?",
+        "STORYDECISION": "You're at a challenging puzzle competition in a dimly lit room. The puzzle is rough and slow to solve. Do you \n\n[i]persevere and solve it[/i] or [i]quit and join a different activity[/i]?",
         "DEC1" : "Persevere and solve it",
         "DEC2" : "Quit and join a different activity",
         "CONSEQUENCE1" : {"consequenceText": "You persevere and solve the puzzle, gaining knowledge and improving your reputation for determination and problem-solving.", "reputation": true, "time": false, "knowledge": true},
@@ -152,7 +152,7 @@ decisionsDict = {
     },
    19: {
         "KEYWORDS": ["fast", "loud", "hot"],
-        "STORYDECISION": "You're at a fast-food restaurant known for its loud, bustling atmosphere and hot, spicy dishes. Do you [i]order the spiciest meal on the menu[/i] or [i]opt for a milder option[/i]?",
+        "STORYDECISION": "You're at a fast-food restaurant known for its loud, bustling atmosphere and hot, spicy dishes. Do you \n\n[i]order the spiciest meal on the menu[/i] or [i]opt for a milder option[/i]?",
         "DEC1" : "Order the spiciest meal on the menu",
         "DEC2" : "Opt for a milder option",
         "CONSEQUENCE1" : {"consequenceText": "You order the spiciest meal, testing your tolerance and gaining knowledge about different cuisines. Your fitness level improves from the heat.", "reputation": true, "time": false, "knowledge": true, "fitnesslevel": true},
@@ -160,7 +160,7 @@ decisionsDict = {
     },
    20: {
         "KEYWORDS": ["soft", "clear", "quiet"],
-        "STORYDECISION": "You're in a peaceful garden with soft, clear lighting. The atmosphere is quiet and serene. Do you [i]meditate and embrace the tranquility[/i] or [i]engage in a conversation with a stranger[/i]?",
+        "STORYDECISION": "You're in a peaceful garden with soft, clear lighting. The atmosphere is quiet and serene. Do you \n\n[i]meditate and embrace the tranquility[/i] or [i]engage in a conversation with a stranger[/i]?",
         "DEC1" : "Meditate and embrace the tranquility",
         "DEC2" : "Engage in a conversation with a stranger",
         "CONSEQUENCE1" : {"consequenceText": "You meditate, finding inner peace and mindfulness. Your health and social connections improve as you connect with yourself and others.", "reputation": true, "time": false, "health": true, "socialconnections": true},
@@ -168,7 +168,7 @@ decisionsDict = {
     },
    21: {
         "KEYWORDS": ["cold", "quiet", "dim"],
-        "STORYDECISION": "You're in a dimly lit, cold room during a power outage. It's quiet except for the howling wind outside. Do you [i]light a candle and read a book[/i] or [i]sit in darkness and listen to the wind[/i]?",
+        "STORYDECISION": "You're in a dimly lit, cold room during a power outage. It's quiet except for the howling wind outside. Do you \n\n[i]light a candle and read a book[/i] or [i]sit in darkness and listen to the wind[/i]?",
         "DEC1" : "Light a candle and read a book",
         "DEC2" : "Sit in darkness and listen to the wind",
         "CONSEQUENCE1" : {"consequenceText": "You light a candle, read a book, and gain knowledge during the blackout. Your reputation improves for your resourcefulness and calm approach.", "reputation": true, "time": false, "knowledge": true},
@@ -176,7 +176,7 @@ decisionsDict = {
     },
    22: {
         "KEYWORDS": ["soft", "slow", "quiet"],
-        "STORYDECISION": "You're at a classical music concert in a softly lit, elegant hall. The music is slow and soothing. Do you [i]close your eyes and immerse yourself in the music[/i] or [i]strike up a conversation with a fellow concertgoer[/i]?",
+        "STORYDECISION": "You're at a classical music concert in a softly lit, elegant hall. The music is slow and soothing. Do you \n\n[i]close your eyes and immerse yourself in the music[/i] or [i]strike up a conversation with a fellow concertgoer[/i]?",
         "DEC1" : "Close your eyes and immerse yourself in the music",
         "DEC2" : "Strike up a conversation with a fellow concertgoer",
         "CONSEQUENCE1" : {"consequenceText": "You close your eyes, immersing yourself in the music's beauty. Your mindfulness and knowledge of classical music improve.", "reputation": true, "time": false, "knowledge": true},
@@ -184,7 +184,7 @@ decisionsDict = {
     },
    23: {
         "KEYWORDS": ["hot", "fast", "bright"],
-        "STORYDECISION": "You're in a bustling city during a hot summer day. You see a food truck with a fast-moving line, and the colorful sign is bright. Do you [i]join the line for a spicy dish[/i] or [i]keep walking and find a quieter place[/i]?",
+        "STORYDECISION": "You're in a bustling city during a hot summer day. You see a food truck with a fast-moving line, and the colorful sign is bright. Do you \n\n[i]join the line for a spicy dish[/i] or [i]keep walking and find a quieter place[/i]?",
         "DEC1" : "Join the line for a spicy dish",
         "DEC2" : "Keep walking and find a quieter place",
         "CONSEQUENCE1" : {"consequenceText": "You join the line, savoring a spicy dish and testing your taste buds. Your fitness level improves as you embrace the heat.", "reputation": true, "time": false, "fitnesslevel": true},
@@ -192,7 +192,7 @@ decisionsDict = {
     },
    24: {
         "KEYWORDS": ["bright", "fast", "loud"],
-        "STORYDECISION": "You're at a busy technology convention in a brightly lit, fast-paced hall with loud presentations. Do you [i]attend a workshop on the latest tech trends[/i] or [i]explore the exhibit hall quickly[/i]?",
+        "STORYDECISION": "You're at a busy technology convention in a brightly lit, fast-paced hall with loud presentations. Do you \n\n[i]attend a workshop on the latest tech trends[/i] or [i]explore the exhibit hall quickly[/i]?",
         "DEC1" : "Attend a workshop on the latest tech trends",
         "DEC2" : "Explore the exhibit hall quickly",
         "CONSEQUENCE1" : {"consequenceText": "You attend the workshop, gaining valuable knowledge about the latest tech trends. Your reputation improves as you show dedication to your field.", "reputation": true, "time": false, "knowledge": true},
@@ -200,7 +200,7 @@ decisionsDict = {
     },
    25: {
         "KEYWORDS": ["soft", "slow", "clear"],
-        "STORYDECISION": "You're on a leisurely hike in a serene forest with soft sunlight filtering through clear skies. The pace is slow. Do you [i]take a moment to appreciate the scenery[/i] or [i]hike faster to reach your destination[/i]?",
+        "STORYDECISION": "You're on a leisurely hike in a serene forest with soft sunlight filtering through clear skies. The pace is slow. Do you \n\n[i]take a moment to appreciate the scenery[/i] or [i]hike faster to reach your destination[/i]?",
         "DEC1" : "Take a moment to appreciate the scenery",
         "DEC2" : "Hike faster to reach your destination",
         "CONSEQUENCE1" : {"consequenceText": "You take a moment to appreciate the scenery, gaining mindfulness and connecting with nature. Your health improves as you enjoy the peaceful surroundings.", "reputation": true, "time": false, "health": true},
@@ -208,7 +208,7 @@ decisionsDict = {
     },
    26: {
         "KEYWORDS": ["smooth", "soft", "clear"],
-        "STORYDECISION": "You're choosing a bedsheet set for your bedroom. The options are soft and smooth in texture, and the colors are clear and vibrant. Do you prefer [i]silky, smooth sheets[/i] or [i]soft, cozy sheets[/i]?",
+        "STORYDECISION": "You're choosing a bedsheet set for your bedroom. The options are soft and smooth in texture, and the colors are clear and vibrant. Do you prefer \n\n[i]silky, smooth sheets[/i] or [i]soft, cozy sheets[/i]?",
         "DEC1" : "Silky, smooth sheets",
         "DEC2" : "Soft, cozy sheets",
         "CONSEQUENCE1" : {"consequenceText": "You choose silky, smooth sheets, adding a touch of luxury to your bedroom. Your reputation improves for your refined taste.", "reputation": true, "time": false},
@@ -216,7 +216,7 @@ decisionsDict = {
     },
    27: {
         "KEYWORDS": ["quiet", "slow", "clear"],
-        "STORYDECISION": "You're at a beach at dawn. The atmosphere is quiet, the waves are slow and gentle, and the sky is clear. Do you [i]sit and meditate by the shore[/i] or [i]go for a peaceful morning swim[/i]?",
+        "STORYDECISION": "You're at a beach at dawn. The atmosphere is quiet, the waves are slow and gentle, and the sky is clear. Do you \n\n[i]sit and meditate by the shore[/i] or [i]go for a peaceful morning swim[/i]?",
         "DEC1" : "Sit and meditate by the shore",
         "DEC2" : "Go for a peaceful morning swim",
         "CONSEQUENCE1" : {"consequenceText": "You sit and meditate, finding inner peace and mindfulness as you connect with the tranquil beach. Your health improves, and you gain knowledge.", "reputation": true, "time": false, "health": true, "knowledge": true},
@@ -224,7 +224,7 @@ decisionsDict = {
     },
    28: {
         "KEYWORDS": ["soft", "slow", "cloudy"],
-        "STORYDECISION": "You're on a cloudy, slow-paced day at the beach. The sand is soft beneath your feet. Do you [i]build sandcastles[/i] or [i]lie down and listen to the waves[/i]?",
+        "STORYDECISION": "You're on a cloudy, slow-paced day at the beach. The sand is soft beneath your feet. Do you \n\n[i]build sandcastles[/i] or [i]lie down and listen to the waves[/i]?",
         "DEC1" : "Build sandcastles",
         "DEC2" : "Lie down and listen to the waves",
         "CONSEQUENCE1" : {"consequenceText": "You build sandcastles, tapping into your creative side and improving your reputation as a beach artist. Your social connections grow as others join in the fun.", "reputation": true, "time": false, "socialconnections": true},
@@ -232,7 +232,7 @@ decisionsDict = {
     },
    29: {
         "KEYWORDS": ["cold", "slow", "dim"],
-        "STORYDECISION": "You're in a dimly lit, cold library with slow, creaking floorboards. Do you [i]browse and read a classic novel[/i] or [i]explore the ancient history section[/i]?",
+        "STORYDECISION": "You're in a dimly lit, cold library with slow, creaking floorboards. Do you \n\n[i]browse and read a classic novel[/i] or [i]explore the ancient history section[/i]?",
         "DEC1" : "Browse and read a classic novel",
         "DEC2" : "Explore the ancient history section",
         "CONSEQUENCE1" : {"consequenceText": "You read a classic novel, gaining knowledge and improving your reputation as a literary enthusiast. Your social connections grow as fellow book lovers appreciate your choice.", "reputation": true, "time": false, "knowledge": true, "socialconnections": true},

@@ -1,0 +1,10 @@
+{
+	"nodes":[
+		{"type":"file","file":"CLINT/Consuqence Resoults.md","id":"1b4142b4f513ef06","x":-2240,"y":400,"width":1080,"height":760},
+		{"type":"file","file":"CLINT/TO-DO.md","id":"9ca1514bb94e2cec","x":-1080,"y":80,"width":1080,"height":1080},
+		{"id":"feb10b32b3d7e0c8","x":-1080,"y":-80,"width":784,"height":80,"type":"text","text":"VIdeo games are bad for you, educational games are our future generations!"}
+	],
+	"edges":[
+		{"id":"696aa6e47b5e8e2c","fromNode":"feb10b32b3d7e0c8","fromSide":"bottom","toNode":"9ca1514bb94e2cec","toSide":"top"}
+	]
+}

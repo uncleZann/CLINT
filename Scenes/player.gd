@@ -11,7 +11,7 @@ var looking = true
 @onready var rightHand = $Pivot/RightHand
 @onready var leftHand = $Pivot/LeftHand
 
-var zommedAmmount = 0.6
+var zommedAmmount = 0.5
 #player movement
 
 #escape
@@ -40,11 +40,11 @@ func player_movement(delta):
 		#await get_tree().create_timer(0.1).timeout
 		velocity.y = jumpVelocity
 	
-	if Input.is_action_pressed("zoomout"):
-		if zommedAmmount >= 0.01:
-			zommedAmmount += -0.01
-	elif Input.is_action_pressed("zoomin"):
-		zommedAmmount += 0.01
+#	if Input.is_action_pressed("zoomout"):
+#		if zommedAmmount >= 0.01:
+#			zommedAmmount += -0.01
+#	elif Input.is_action_pressed("zoomin"):
+#		zommedAmmount += 0.01
 		
 	$playerCamera.zoom = Vector2(zommedAmmount, zommedAmmount)
 

@@ -8,116 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "6bd9c270b0817035",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ChatGpt.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0589d29a904ecb2f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Decisions Generation.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "93998e03be6b264b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Decisions Generation.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "13d68613882ae07d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ChatGpt.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "810530b4eddfa9de",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Decisions Generation.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b6674d6a0618d73f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Decisions Generation.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "79ec5aafbb9cfd13",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "StoriesInJSON.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "68224517ba1a1868",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Consuqence Resoults.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           },
           {
-            "id": "774f04c255110d28",
+            "id": "a4bf099924bf1c01",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Social Connections.md",
+                "file": "CLINT/TO-DO.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -125,7 +29,7 @@
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -191,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Consuqence Resoults.md",
+                "file": "CLINT/TO-DO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -208,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Consuqence Resoults.md",
+                "file": "CLINT/TO-DO.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -231,16 +135,16 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Consuqence Resoults.md"
+                "file": "CLINT/TO-DO.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -252,12 +156,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "68224517ba1a1868",
+  "active": "a4bf099924bf1c01",
   "lastOpenFiles": [
-    "Social Connections.md",
-    "Consuqence Resoults.md",
-    "Decisions Generation.md",
-    "ChatGpt.md",
-    "StoriesInJSON.md"
+    "CLINT/Game Design - Style.md",
+    "CLINT/Consuqence Resoults.md",
+    "CLINT/TO-DO.md",
+    "CLINT.canvas",
+    "CLINT/Social Connections.md",
+    "CLINT/Decisions Generation.md",
+    "CLINT/ChatGpt.md",
+    "CLINT/StoriesInJSON.md",
+    "CLINT",
+    "2023-08-28.md"
   ]
 }

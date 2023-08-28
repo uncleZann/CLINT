@@ -16,4 +16,8 @@ collision_mask = 4
 position = Vector2(0, -273.5)
 shape = SubResource("RectangleShape2D_hbgav")
 
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+position = Vector2(3.5, -279.5)
+scale = Vector2(4.25, 42.65)
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered" flags=6]

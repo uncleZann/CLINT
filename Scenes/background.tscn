@@ -392,12 +392,15 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="FpsCounter" type="Label" parent="Control"]
+top_level = true
+light_mask = 512
+visibility_layer = 512
+z_index = 1000
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = 9
 anchor_bottom = 1.0
-offset_top = 599.0
-grow_horizontal = 2
+offset_top = 28.0
+offset_right = 99.0
 grow_vertical = 2
 theme = ExtResource("7_8x02q")
 theme_override_font_sizes/font_size = 30

@@ -1,2 +1,0 @@
-[[Consuqence Resoults]]
-[[StoriesInJSON]]

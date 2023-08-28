@@ -1,5 +1,8 @@
 extends Node
 
+func _ready():
+	VisibleOnScreenEnabler2D
+
 # Ignore ------------- Ignore ------------- Ignore ------------- Ignore
 var worldExist1: bool
 var worldExist2: bool

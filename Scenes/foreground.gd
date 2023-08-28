@@ -39,7 +39,7 @@ func decisionsDictLoaded():
 # DecisionsLogic()  -  variables
 var rng = RandomNumberGenerator.new()
 func DecisionsLogic():
-	chosenDecision = rng.randi_range(1,1)#(1, decisionsDict.size())
+	chosenDecision = rng.randi_range(1, decisionsDict.size())
 
 	if not decisionsDict.size() == decisionAlreadySeen.size():
 		if not chosenDecision in decisionAlreadySeen:  #if the random num isnt in the array, it saves it and makes a world
@@ -61,52 +61,100 @@ func _on_story_detectors_story_detected():
 #NoTouch --------------------------------------------------------------
 #NoTouch --------------------------------------------------------------
 @onready var animationPlayer = $FullAnimations
-@onready var mainText = $CanvasLayer/Story/Control/RichTextLabel
+@onready var mainText: RichTextLabel = $CanvasLayer/SizeControll/mainText/RichTextLabel
+@onready var options = $CanvasLayer/SizeControll/Options
+@onready var option1: Button = $CanvasLayer/SizeControll/Options/HBoxContainer/option1
+@onready var option2: Button = $CanvasLayer/SizeControll/Options/HBoxContainer/option2
+
 func keywordsfunc():
+	$StartEndAnimations.play("default")
 	for i in keywords:
 		animationPlayer.play(i)
 func storyfunc():    #add voice here
 	mainText.text = storydecision
 	start_dialogue()
 func decisionfunc():
-	$CanvasLayer/Decisions/Control.visible = true
-	$CanvasLayer/Decisions/Control/HBoxContainer/option1.text = dec1
-	$CanvasLayer/Decisions/Control/HBoxContainer/option2.text = dec2
+	options.visible = true
+	option1.text = dec1
+	option2.text = dec2
 func _on_option_1_pressed():
 	consequenceResoult(consequence1)
-	$CanvasLayer/Decisions/Control/HBoxContainer/option1.disabled = true
-	$CanvasLayer/Decisions/Control/HBoxContainer/option2.disabled = true
+	option1.disabled = true
+	option2.disabled = true
 func _on_option_2_pressed():
 	consequenceResoult(consequence2)
-	$CanvasLayer/Decisions/Control/HBoxContainer/option1.disabled = true
-	$CanvasLayer/Decisions/Control/HBoxContainer/option2.disabled = true
+	option1.disabled = true
+	option2.disabled = true
+
+var itsEnding = false
 # Ignore ------------- Ignore ------------- Ignore ------------- Ignore
 
 
 
 # Touch ------------- Touch ------------- Touch ------------- Touch
-func consequenceResoult(consequence):
+func consequenceResoult(consequence: Dictionary):
 	
-	if consequence["time"]:
-		mainText.text = consequence["consequenceText"]
-		start_dialogue()
-		await get_tree().create_timer(7).timeout
-		endInteraction()
-	else:
-		mainText.text = consequence["consequenceText"]
-		start_dialogue()
-		await get_tree().create_timer(5).timeout
-		endInteraction()
+	if consequence.has("time"):
+		if consequence["time"]:
+			mainText.text = consequence["consequenceText"]
+			start_dialogue()
+			mainText.text = "Now you wait (:"
+			start_dialogue()
+			await get_tree().create_timer(20).timeout
+			endInteraction()
+		else:
+			mainText.text = consequence["consequenceText"]
+			itsEnding = true
+			start_dialogue()
 	
-	if consequence["reputation"]:
-		print("+ reputation")
-	else:
-		print("- reputation")
-	
-	if consequence["playercash"]:
-		print("+ playercash")
-	else:
-		print("- playercash")
+	if consequence.has("reputation"):
+		if consequence["reputation"]:
+			print("+ reputation")
+		else:
+			print("- reputation")
+
+	if consequence.has("socialconnections"):
+		if consequence["socialconnections"]:
+			print("+ socialconnections")
+		else:
+			print("- socialconnections")
+
+	if consequence.has("playercash"):
+		if consequence["playercash"]:
+			print("+ playercash")
+		else:
+			print("- playercash")
+
+
+		if consequence["socialconnections"]:
+			print("+ socialconnections")
+		else:
+			print("- socialconnections")
+
+	if consequence.has("playergold"):
+		if consequence["playergold"]:
+			print("+ playergold")
+		else:
+			print("- playergold")
+
+	if consequence.has("fitnesslevel"):
+		if consequence["fitnesslevel"]:
+			print("+ fitnesslevel")
+		else:
+			print("- fitnesslevel")
+
+	if consequence.has("health"):
+		if consequence["health"]:
+			print("+ health")
+		else:
+			print("- health")
+
+	if consequence.has("knowledge"):
+		if consequence["knowledge"]:
+			print("+ knowledge")
+		else:
+			print("- knowledge")
+
 
 # Touch ------------- Touch ------------- Touch ------------- Touch
 
@@ -114,12 +162,13 @@ func consequenceResoult(consequence):
 
 # Ignore ------------- Ignore ------------- Ignore ------------- Ignore
 func endInteraction():
-	$CanvasLayer/Decisions/Control.visible = false
+	options.visible = false
+	$StartEndAnimations.play_backwards("default")
 	for i in keywords:
 		animationPlayer.play(i + "b")
 	mainText.text = ""
-	$CanvasLayer/Decisions/Control/HBoxContainer/option1.disabled = false
-	$CanvasLayer/Decisions/Control/HBoxContainer/option2.disabled = false
+	option1.disabled = false
+	option2.disabled = false
 
 func start_dialogue():
 	mainText.visible_ratio = 0
@@ -128,4 +177,8 @@ func start_dialogue():
 		mainText.visible_characters += 1
 	await get_tree().create_timer(1).timeout
 	decisionfunc()
+	if itsEnding:
+		await get_tree().create_timer(1).timeout
+		endInteraction()
+		itsEnding = false
 #Typing # Ignore ------------- Ignore ------------- Ignore ------------- Ignore
