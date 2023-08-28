@@ -53,8 +53,10 @@ func specific_world_load_data(file_path:String):
 	var loaded = load(file_path)
 	playerCash = loaded.playerCash
 	playerGold = loaded.playerGold
-	decisionAlreadySeen = loaded.decisionAlreadySeen
 	playerReputation = loaded.playerReputation
+	
+	#ignore
+	decisionAlreadySeen = loaded.decisionAlreadySeen
 
 # Ignore ------------- Ignore ------------- Ignore ------------- Ignore
 signal colisionDetectedSignal

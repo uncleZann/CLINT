@@ -93,9 +93,9 @@ func spawn_items():
 	var itemInst = preload("res://Scenes/story_detectors.tscn")
 	var usedPoints = []
 	
-	for i in 8:
+	for i in 38:
 		
-		var selected_point = rng.randi_range(200, allOfThem.size())
+		var selected_point = rng.randi_range(1, allOfThem.size())#50, allOfThem.size())
 		if not selected_point in usedPoints:
 			var item = itemInst.instantiate()
 			item.position = allOfThem[selected_point]

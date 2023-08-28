@@ -1,0 +1,1 @@
+The strength of the player's social network could influence their access to information, resources, and assistance from NPCs. Building and maintaining relationships with in-game characters could be crucial.

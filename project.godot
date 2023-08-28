@@ -14,7 +14,7 @@ config/name="Clint"
 run/main_scene="res://Scenes/menu.tscn"
 config/auto_accept_quit=false
 config/features=PackedStringArray("4.1", "GL Compatibility")
-config/icon="res://Resources/icon.svg"
+config/icon="res://Resources/icon.png"
 
 [autoload]
 

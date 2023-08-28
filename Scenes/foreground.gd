@@ -39,7 +39,7 @@ func decisionsDictLoaded():
 # DecisionsLogic()  -  variables
 var rng = RandomNumberGenerator.new()
 func DecisionsLogic():
-	chosenDecision = rng.randi_range(2,2)#(1, decisionsDict.size())
+	chosenDecision = rng.randi_range(1,1)#(1, decisionsDict.size())
 
 	if not decisionsDict.size() == decisionAlreadySeen.size():
 		if not chosenDecision in decisionAlreadySeen:  #if the random num isnt in the array, it saves it and makes a world
@@ -99,9 +99,14 @@ func consequenceResoult(consequence):
 		endInteraction()
 	
 	if consequence["reputation"]:
-		print("+")
+		print("+ reputation")
 	else:
-		print("-")
+		print("- reputation")
+	
+	if consequence["playercash"]:
+		print("+ playercash")
+	else:
+		print("- playercash")
 
 # Touch ------------- Touch ------------- Touch ------------- Touch
 
