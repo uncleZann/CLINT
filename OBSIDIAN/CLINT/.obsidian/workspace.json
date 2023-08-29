@@ -19,12 +19,14 @@
             "id": "a4bf099924bf1c01",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "CLINT/TO-DO.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+                "file": "CLINT.canvas",
+                "viewState": {
+                  "x": -637.6101971129224,
+                  "y": 632.4294974113831,
+                  "zoom": -1.3333333333333328
+                }
               }
             }
           }
@@ -95,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CLINT/TO-DO.md",
+                "file": "CLINT/Camera Movment.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CLINT/TO-DO.md",
+                "file": "CLINT/Camera Movment.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CLINT/TO-DO.md"
+                "file": "CLINT/Camera Movment.md"
               }
             }
           }
@@ -158,10 +160,11 @@
   },
   "active": "a4bf099924bf1c01",
   "lastOpenFiles": [
+    "CLINT/Camera Movment.md",
+    "CLINT.canvas",
+    "CLINT/TO-DO.md",
     "CLINT/Game Design - Style.md",
     "CLINT/Consuqence Resoults.md",
-    "CLINT/TO-DO.md",
-    "CLINT.canvas",
     "CLINT/Social Connections.md",
     "CLINT/Decisions Generation.md",
     "CLINT/ChatGpt.md",

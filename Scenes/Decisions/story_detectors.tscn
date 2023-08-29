@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dj52dwovnjv2d"]
+
+[ext_resource type="Script" path="res://Scenes/Decisions/story_detectors.gd" id="1_rs7rm"]
+[ext_resource type="Texture2D" uid="uid://d8812rc3ld8y" path="res://Resources/QuestionMark.svg" id="2_odti0"]
+
+[node name="storyDetectors" type="Node2D"]
+script = ExtResource("1_rs7rm")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(3.3, 4.7)
+
+[node name="QuestionmarkButton" type="Button" parent="."]
+offset_left = -33.0
+offset_top = -48.0
+offset_right = 33.0
+offset_bottom = 46.0
+icon = ExtResource("2_odti0")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="QuestionmarkButton" to="." method="_on_questionmark_button_pressed"]

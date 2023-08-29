@@ -1,14 +1,21 @@
 extends Node2D
+class_name base_level
 
-func _process(_delta):
+func _ready():
+	Globals.MainPlacmentTilemap = $MainPlacmentTilemap
+
+func _process(_delta) -> void:
 	if Input.is_action_just_pressed("escape"):
-		$CanvasLayer.visible = true
-		$Ui/CanvasLayer.visible = false
-	
-	$Ui/CanvasLayer/Control/VBoxContainer/Label.text = str("Cash: ", Globals.playerCash, "Gold: ", Globals.playerGold)
+		$Ui/EscapeMenu.visible = true
+
+func _on_escape_menu_resume_pressed() -> void:
+	$Ui/EscapeMenu.visible = false
 
 
-func _on_escape_menu_resume_pressed():
-	print("pressed")
-	$CanvasLayer.visible = false
-	$Ui/CanvasLayer.visible = true
+
+var item = preload("res://Scenes/Items/placment_item.tscn")
+
+func _on_in_game_ui_ui_change(num):
+	if num == 1:
+		var theitem = item.instantiate()
+		$itemsHome.add_child(theitem)

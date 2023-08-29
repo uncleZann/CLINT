@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bx4x6siiu8cb0"]
+
+[ext_resource type="PackedScene" uid="uid://500fxwhj87s0" path="res://Scenes/Levels/base_level.tscn" id="1_uc2tg"]
+[ext_resource type="PackedScene" uid="uid://b03tnpxj54ny1" path="res://Scenes/Items/test_item.tscn" id="2_lq177"]
+[ext_resource type="Script" path="res://Scenes/Levels/main_home_level.gd" id="2_xy4pn"]
+[ext_resource type="Texture2D" uid="uid://dx1cw6eca78kh" path="res://Resources/Pig.png" id="3_w52lf"]
+
+[node name="MainHomeLevel" instance=ExtResource("1_uc2tg")]
+script = ExtResource("2_xy4pn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="2"]
+position = Vector2(172, 24)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_w52lf")
+
+[node name="TestItem" parent="itemsHome" index="0" instance=ExtResource("2_lq177")]
+
+[node name="TestItem2" parent="itemsHome" index="1" instance=ExtResource("2_lq177")]
+position = Vector2(-846, -400)
+
+[node name="TestItem3" parent="itemsHome" index="2" instance=ExtResource("2_lq177")]
+position = Vector2(-854, 604)
+
+[node name="TestItem4" parent="itemsHome" index="3" instance=ExtResource("2_lq177")]
+position = Vector2(588, -438)
+
+[node name="TestItem5" parent="itemsHome" index="4" instance=ExtResource("2_lq177")]
+position = Vector2(943, 393)
+
+[node name="TestItem6" parent="itemsHome" index="5" instance=ExtResource("2_lq177")]
+position = Vector2(-42, 1001)

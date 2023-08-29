@@ -1,10 +1,14 @@
 {
 	"nodes":[
+		{"id":"a33c60893c2a794e","x":480,"y":1600,"width":336,"height":50,"type":"group","label":"Game Input"},
 		{"type":"file","file":"CLINT/Consuqence Resoults.md","id":"1b4142b4f513ef06","x":-2240,"y":400,"width":1080,"height":760},
 		{"type":"file","file":"CLINT/TO-DO.md","id":"9ca1514bb94e2cec","x":-1080,"y":80,"width":1080,"height":1080},
-		{"id":"feb10b32b3d7e0c8","x":-1080,"y":-80,"width":784,"height":80,"type":"text","text":"VIdeo games are bad for you, educational games are our future generations!"}
+		{"type":"text","text":"VIdeo games are bad for you, educational games are our future generations!","id":"feb10b32b3d7e0c8","x":-1080,"y":-80,"width":784,"height":80},
+		{"id":"1d14ad766f670c9f","x":640,"y":1920,"width":1240,"height":1160,"type":"file","file":"CLINT/Camera Movment.md"}
 	],
 	"edges":[
-		{"id":"696aa6e47b5e8e2c","fromNode":"feb10b32b3d7e0c8","fromSide":"bottom","toNode":"9ca1514bb94e2cec","toSide":"top"}
+		{"id":"696aa6e47b5e8e2c","fromNode":"feb10b32b3d7e0c8","fromSide":"bottom","toNode":"9ca1514bb94e2cec","toSide":"top"},
+		{"id":"d12f41ff949eecbe","fromNode":"9ca1514bb94e2cec","fromSide":"right","toNode":"a33c60893c2a794e","toSide":"left"},
+		{"id":"34af661da6f55f18","fromNode":"a33c60893c2a794e","fromSide":"bottom","toNode":"1d14ad766f670c9f","toSide":"top"}
 	]
 }

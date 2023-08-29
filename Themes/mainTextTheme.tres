@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=7 format=3 uid="uid://c6qj4gpqpe15"]
 
-[ext_resource type="StyleBox" uid="uid://daxr3pfl04oy0" path="res://Scenes/hover.tres" id="1_nuteo"]
+[ext_resource type="StyleBox" uid="uid://daxr3pfl04oy0" path="res://Themes/hover.tres" id="1_nuteo"]
 [ext_resource type="FontFile" uid="uid://dhkt28cwcslm6" path="res://Fonts/SpicySushi-L3MnE.ttf" id="1_vtx5e"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6hb0m"]

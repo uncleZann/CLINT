@@ -1,0 +1,443 @@
+[gd_scene load_steps=15 format=3 uid="uid://c113iciuq54id"]
+
+[ext_resource type="Script" path="res://Scenes/Ui/menu.gd" id="1_pqk0r"]
+[ext_resource type="Theme" uid="uid://c6qj4gpqpe15" path="res://Themes/mainTextTheme.tres" id="2_cm52q"]
+[ext_resource type="FontFile" uid="uid://dhkt28cwcslm6" path="res://Fonts/SpicySushi-L3MnE.ttf" id="4_lr8h8"]
+[ext_resource type="Theme" uid="uid://bxc0tsxn6mdmk" path="res://Themes/menuTheme.tres" id="5_fdp1x"]
+[ext_resource type="AudioStream" uid="uid://c3ai3ugmg4wg0" path="res://Audio/mouse-click-153941.mp3" id="5_w52rp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6hb0m"]
+bg_color = Color(0.32549, 0.521569, 0.682353, 0.780392)
+border_width_bottom = 5
+border_color = Color(0.239216, 0.411765, 0.54902, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_size = 4
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bmjqj"]
+bg_color = Color(0.356863, 0.560784, 0.72549, 1)
+border_width_bottom = 5
+border_color = Color(0.239216, 0.411765, 0.54902, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_size = 4
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fqsvw"]
+bg_color = Color(0.431373, 0.635294, 0.8, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 5
+border_color = Color(0.239216, 0.411765, 0.54902, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_size = 4
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wf7na"]
+content_margin_top = 19.0
+content_margin_bottom = 9.0
+bg_color = Color(0.356863, 0.560784, 0.72549, 1)
+border_width_bottom = 5
+border_color = Color(0.239216, 0.411765, 0.54902, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 4
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k1g4t"]
+bg_color = Color(0.211765, 0.372549, 0.498039, 1)
+border_width_bottom = 5
+border_color = Color(0.239216, 0.411765, 0.54902, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_size = 4
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="Theme" id="Theme_sxema"]
+default_font = ExtResource("4_lr8h8")
+default_font_size = 50
+Button/styles/disabled = SubResource("StyleBoxFlat_6hb0m")
+Button/styles/focus = SubResource("StyleBoxFlat_bmjqj")
+Button/styles/hover = SubResource("StyleBoxFlat_fqsvw")
+Button/styles/normal = SubResource("StyleBoxFlat_wf7na")
+Button/styles/pressed = SubResource("StyleBoxFlat_k1g4t")
+
+[sub_resource type="Theme" id="Theme_vvier"]
+default_font = ExtResource("4_lr8h8")
+default_font_size = 80
+Button/styles/disabled = SubResource("StyleBoxFlat_6hb0m")
+Button/styles/focus = SubResource("StyleBoxFlat_bmjqj")
+Button/styles/hover = SubResource("StyleBoxFlat_fqsvw")
+Button/styles/normal = SubResource("StyleBoxFlat_wf7na")
+Button/styles/pressed = SubResource("StyleBoxFlat_k1g4t")
+
+[sub_resource type="Theme" id="Theme_y7kbi"]
+default_font = ExtResource("4_lr8h8")
+default_font_size = 50
+Button/styles/disabled = SubResource("StyleBoxFlat_6hb0m")
+Button/styles/focus = SubResource("StyleBoxFlat_bmjqj")
+Button/styles/hover = SubResource("StyleBoxFlat_fqsvw")
+Button/styles/normal = SubResource("StyleBoxFlat_wf7na")
+Button/styles/pressed = SubResource("StyleBoxFlat_k1g4t")
+
+[sub_resource type="Theme" id="Theme_5cy0j"]
+default_font = ExtResource("4_lr8h8")
+default_font_size = 50
+Button/styles/disabled = SubResource("StyleBoxFlat_6hb0m")
+Button/styles/focus = SubResource("StyleBoxFlat_bmjqj")
+Button/styles/hover = SubResource("StyleBoxFlat_fqsvw")
+Button/styles/normal = SubResource("StyleBoxFlat_wf7na")
+Button/styles/pressed = SubResource("StyleBoxFlat_k1g4t")
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pqk0r")
+
+[node name="Background" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundWalpaper" type="TextureRect" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -59.0
+offset_top = -60.0
+offset_right = 146.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+
+[node name="BackgroundBlur" type="ColorRect" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.729412, 0.439216, 0.309804, 0.741176)
+
+[node name="mainMenu" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 436.0
+grow_vertical = 2
+
+[node name="additionalDarkness" type="Panel" parent="mainMenu"]
+modulate = Color(1, 1, 1, 0.384314)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="mainMenu"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 38.0
+offset_top = -134.0
+offset_right = -32.0
+offset_bottom = 134.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="Play" type="Button" parent="mainMenu/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_cm52q")
+text = "Play"
+
+[node name="Options" type="Button" parent="mainMenu/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_cm52q")
+text = "Options"
+
+[node name="Quit" type="Button" parent="mainMenu/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_cm52q")
+text = "Quit"
+
+[node name="optionsMenu" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 436.0
+grow_vertical = 2
+
+[node name="additionalDarkness" type="Panel" parent="optionsMenu"]
+modulate = Color(1, 1, 1, 0.384314)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="optionsMenu"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 38.0
+offset_top = -134.0
+offset_right = -32.0
+offset_bottom = 134.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="Back" type="Button" parent="optionsMenu/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_cm52q")
+text = "Back"
+
+[node name="playMenu" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="slots" type="HBoxContainer" parent="playMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 162.0
+offset_right = -20.0
+offset_bottom = -112.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="SaveSlot1" type="Panel" parent="playMenu/slots"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="playMenu/slots/SaveSlot1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 20.0
+offset_right = -10.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="playMenu/slots/SaveSlot1/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+theme = SubResource("Theme_sxema")
+text = "Slot one"
+
+[node name="Load1" type="Button" parent="playMenu/slots/SaveSlot1/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 5
+theme = ExtResource("5_fdp1x")
+text = "load
+"
+
+[node name="startNew1" type="Button" parent="playMenu/slots/SaveSlot1/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 5
+theme = ExtResource("5_fdp1x")
+text = "new world
+"
+
+[node name="DeleteWorld1" type="Button" parent="playMenu/slots/SaveSlot1/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("5_fdp1x")
+text = "delete world"
+
+[node name="SaveSlot2" type="Panel" parent="playMenu/slots"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="playMenu/slots/SaveSlot2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 20.0
+offset_right = -10.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="playMenu/slots/SaveSlot2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+theme = SubResource("Theme_sxema")
+text = "Slot Two"
+
+[node name="Load2" type="Button" parent="playMenu/slots/SaveSlot2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 5
+theme = ExtResource("5_fdp1x")
+text = "load
+"
+
+[node name="startNew2" type="Button" parent="playMenu/slots/SaveSlot2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 5
+theme = ExtResource("5_fdp1x")
+text = "new world
+"
+
+[node name="DeleteWorld2" type="Button" parent="playMenu/slots/SaveSlot2/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("5_fdp1x")
+text = "delete world"
+
+[node name="SaveSlot3" type="Panel" parent="playMenu/slots"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="playMenu/slots/SaveSlot3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 20.0
+offset_right = -10.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="playMenu/slots/SaveSlot3/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+theme = SubResource("Theme_sxema")
+text = "Slot Three"
+
+[node name="Load3" type="Button" parent="playMenu/slots/SaveSlot3/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 5
+theme = ExtResource("5_fdp1x")
+text = "Load"
+
+[node name="startNew3" type="Button" parent="playMenu/slots/SaveSlot3/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 5
+theme = ExtResource("5_fdp1x")
+text = "new world
+"
+
+[node name="DeleteWorld3" type="Button" parent="playMenu/slots/SaveSlot3/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("5_fdp1x")
+text = "delete world"
+
+[node name="top" type="VBoxContainer" parent="playMenu"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 163.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="playMenu/top"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme = SubResource("Theme_vvier")
+text = "Chose Saved slot"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="bottom" type="HBoxContainer" parent="playMenu"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -90.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 200
+alignment = 1
+
+[node name="Previous" type="Button" parent="playMenu/bottom"]
+layout_mode = 2
+theme = SubResource("Theme_y7kbi")
+text = "  <-  "
+
+[node name="playBack" type="Button" parent="playMenu/bottom"]
+layout_mode = 2
+theme = SubResource("Theme_y7kbi")
+text = "     Back     "
+
+[node name="Next" type="Button" parent="playMenu/bottom"]
+layout_mode = 2
+theme = SubResource("Theme_5cy0j")
+text = "  ->  "
+
+[node name="ClickSoundPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_w52rp")
+volume_db = 10.0
+pitch_scale = 0.5
+
+[connection signal="pressed" from="mainMenu/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="mainMenu/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="mainMenu/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="optionsMenu/VBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="playMenu/slots/SaveSlot1/VBoxContainer/Load1" to="." method="_on_load_1_pressed"]
+[connection signal="pressed" from="playMenu/slots/SaveSlot1/VBoxContainer/startNew1" to="." method="_on_start_new_1_pressed"]
+[connection signal="pressed" from="playMenu/slots/SaveSlot1/VBoxContainer/DeleteWorld1" to="." method="_on_delete_world_1_pressed"]
+[connection signal="pressed" from="playMenu/slots/SaveSlot2/VBoxContainer/Load2" to="." method="_on_load_2_pressed"]
+[connection signal="pressed" from="playMenu/slots/SaveSlot2/VBoxContainer/startNew2" to="." method="_on_start_new_2_pressed"]
+[connection signal="pressed" from="playMenu/slots/SaveSlot2/VBoxContainer/DeleteWorld2" to="." method="_on_delete_world_2_pressed"]
+[connection signal="pressed" from="playMenu/slots/SaveSlot3/VBoxContainer/Load3" to="." method="_on_load_3_pressed"]
+[connection signal="pressed" from="playMenu/slots/SaveSlot3/VBoxContainer/startNew3" to="." method="_on_start_new_3_pressed"]
+[connection signal="pressed" from="playMenu/slots/SaveSlot3/VBoxContainer/DeleteWorld3" to="." method="_on_delete_world_3_pressed"]
+[connection signal="pressed" from="playMenu/bottom/playBack" to="." method="_on_play_back_pressed"]

@@ -16,9 +16,9 @@ func _process(delta):
 	velocity.y += 500 * delta
 	move_and_slide()
 
-func _on_timer_timeout():
+func _on_timer_timeout() -> void:
 	switch()
-func switch():
+func switch() -> void:
 	pigDirection = randi_range(0, 1)
 	$Timer.wait_time = randi_range(3, 15)
 	$Timer.start()

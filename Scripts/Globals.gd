@@ -1,8 +1,4 @@
 extends Node
-
-func _ready():
-	VisibleOnScreenEnabler2D
-
 # Ignore ------------- Ignore ------------- Ignore ------------- Ignore
 var worldExist1: bool
 var worldExist2: bool
@@ -45,14 +41,14 @@ var playerGold: int:
 		gloablsChange.emit()
 var playerReputation: float
 
-func specific_world_save_data(file_path:String):
+func specific_world_save_data(file_path:String) -> void:
 	var to_save = gameDataforSaving.new()
 	to_save.playerCash = playerCash
 	to_save.playerGold = playerGold
 	to_save.decisionAlreadySeen = decisionAlreadySeen
 	to_save.playerReputation = playerReputation
 	ResourceSaver.save(to_save, file_path)
-func specific_world_load_data(file_path:String):
+func specific_world_load_data(file_path:String) -> void:
 	var loaded = load(file_path)
 	playerCash = loaded.playerCash
 	playerGold = loaded.playerGold
@@ -77,3 +73,10 @@ var playerSpeed: int:
 	set(value):
 		playerSpeed = value
 		playerSpeedChange.emit()
+
+var MainPlacmentTilemap: TileMap:
+	get:
+		return MainPlacmentTilemap
+	set(value):
+		MainPlacmentTilemap = value
+		gloablsChange.emit()
