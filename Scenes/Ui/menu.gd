@@ -9,40 +9,40 @@ func playClickSound() -> void:
 	await get_tree().create_timer(0.03).timeout
 
 
-#MainMenu
+#MainMenu --- BUTTON LOGIC
 func _on_play_pressed() -> void:
 	playClickSound()
 	#get_tree().change_scene_to_file("res://Scenes/Levels/base_level.tscn")
 	mainMenu.visible = false
 	playMenu.visible = true
-
-	
 func _on_options_pressed() -> void:
 	playClickSound()
 	mainMenu.visible = false
 	optionsMenu.visible = true
-
-
 func _on_quit_pressed() -> void:
 	playClickSound()
 	get_tree().quit()
-#MainMenu
+#MainMenu --- BUTTON LOGIC
 
-#OptionsMenu
+#OptionsMenu  --- BUTTON LOGIC
 func _on_back_pressed() -> void:
 	playClickSound()
 	mainMenu.visible = true
 	optionsMenu.visible = false
-#OptionsMenu
+#OptionsMenu  --- BUTTON LOGIC
 
-#PlayMenu
-func _on_play_back_pressed() -> void:
+#---------------------------------------------------------------------------------#
+
+#PlayMenu  --- BUTTON LOGIC
+func _on_play_back_pressed() -> void: #Makes it visible
 	playClickSound()
 	mainMenu.visible = true
 	playMenu.visible = false
 
+var user_prefs: WorldData
 func _ready() -> void:
-	if FileAccess.file_exists("user://general_data.tres"):
+	
+	if FileAccess.file_exists("user://general_data.tres"): #Saves or loads general_data.tres
 		Globals.load_data()
 	else:
 		Globals.save_data()
@@ -60,56 +60,57 @@ func _ready() -> void:
 	else:
 		$playMenu/slots/SaveSlot3/VBoxContainer/Load3.visible = false
 
-
-func change_scene_to_world() -> void:
+func change_scene_to_world() -> void: #Changes scene to our Home World
 	get_tree().change_scene_to_file("res://Scenes/Levels/main_home_level.tscn")
-
 
 func _on_load_1_pressed() -> void:
 	playClickSound()
-	var path = "user://data1.tres"
-	Globals.current_world = path
-	Globals.specific_world_load_data(path)
+	var path = "user://world1.tres"
+	user_prefs = WorldData.load_or_create(path)
+	Globals.currentWorld = path
 	change_scene_to_world()
 func _on_start_new_1_pressed() -> void:
 	playClickSound()
-	var path = "user://data1.tres"
-	Globals.current_world = path
+	var path = "user://world1.tres"
+	user_prefs = WorldData.load_or_create(path)
 	Globals.worldExist1 = true
+	Globals.currentWorld = path
 	change_scene_to_world()
 
 func _on_load_2_pressed() -> void:
 	playClickSound()
-	var path = "user://data2.tres"
-	Globals.current_world = path
-	Globals.specific_world_load_data(path)
+	var path = "user://world2.tres"
+	user_prefs = WorldData.load_or_create(path)
+	Globals.currentWorld = path
 	change_scene_to_world()
 func _on_start_new_2_pressed() -> void:
 	playClickSound()
-	var path = "user://data2.tres"
-	Globals.current_world = path
+	var path = "user://world2.tres"
+	user_prefs = WorldData.load_or_create(path)
+	Globals.currentWorld = path
 	Globals.worldExist2 = true
 	change_scene_to_world()
 
 func _on_load_3_pressed() -> void:
 	playClickSound()
-	var path = "user://data3.tres"
-	Globals.current_world = path
-	Globals.specific_world_load_data(path)
+	var path = "user://world3.tres"
+	user_prefs = WorldData.load_or_create(path)
+	Globals.currentWorld = path
 	change_scene_to_world()
 func _on_start_new_3_pressed() -> void:
 	playClickSound()
-	var path = "user://data3.tres"
-	Globals.current_world = path
+	var path = "user://world3.tres"
+	user_prefs = WorldData.load_or_create(path)
+	Globals.currentWorld = path
 	Globals.worldExist3 = true
 	change_scene_to_world()
 
+
+
 func _on_delete_world_1_pressed() -> void:
-	if FileAccess.file_exists("user://data1.tres"):
-		OS.move_to_trash("user://data1.tres")
+	pass
 func _on_delete_world_2_pressed() -> void:
-	if FileAccess.file_exists("user://data2.tres"):
-		OS.move_to_trash("user://data2.tres")
+	pass
 func _on_delete_world_3_pressed() -> void:
-	if FileAccess.file_exists("user://data3.tres"):
-		OS.move_to_trash("user://data3.tres")
+	pass
+#PlayMenu  --- BUTTON LOGIC

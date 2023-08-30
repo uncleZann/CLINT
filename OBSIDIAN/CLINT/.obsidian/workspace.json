@@ -23,9 +23,9 @@
               "state": {
                 "file": "CLINT.canvas",
                 "viewState": {
-                  "x": -637.6101971129224,
-                  "y": 632.4294974113831,
-                  "zoom": -1.3333333333333328
+                  "x": -589.658480268399,
+                  "y": 966.7928464178092,
+                  "zoom": -0.6666666666666663
                 }
               }
             }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CLINT/Camera Movment.md",
+                "file": "CLINT/TO-DO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CLINT/Camera Movment.md",
+                "file": "CLINT/TO-DO.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CLINT/Camera Movment.md"
+                "file": "CLINT/TO-DO.md"
               }
             }
           }

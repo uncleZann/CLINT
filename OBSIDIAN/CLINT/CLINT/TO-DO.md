@@ -42,7 +42,7 @@
 - [ ] buy house
 - [ ] buy iland with clint
 - [ ] save clint with 4.8million
-- [ ] 
+- [ ] add junk food that will fil;l you up, but in longterm it will make you slower
 
 
 

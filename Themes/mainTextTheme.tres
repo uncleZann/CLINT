@@ -25,9 +25,7 @@ corner_radius_bottom_left = 3
 shadow_size = 4
 shadow_offset = Vector2(2, 2)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v5e2y"]
-content_margin_top = 19.0
-content_margin_bottom = 9.0
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0v6ig"]
 bg_color = Color(0.356863, 0.560784, 0.72549, 1)
 border_width_bottom = 5
 border_color = Color(0.239216, 0.411765, 0.54902, 1)
@@ -57,5 +55,5 @@ default_font_size = 50
 Button/styles/disabled = SubResource("StyleBoxFlat_6hb0m")
 Button/styles/focus = SubResource("StyleBoxFlat_bmjqj")
 Button/styles/hover = ExtResource("1_nuteo")
-Button/styles/normal = SubResource("StyleBoxFlat_v5e2y")
+Button/styles/normal = SubResource("StyleBoxFlat_0v6ig")
 Button/styles/pressed = SubResource("StyleBoxFlat_k1g4t")

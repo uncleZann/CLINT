@@ -2,15 +2,21 @@ extends Control
 
 signal UiChange
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
-func _on_button_pressed():
+func _on_button_pressed() -> void:
 	UiChange.emit(1)
+	SwitchScreen()
+func _on_shop_button_pressed() -> void:
+	SwitchScreen()
+func _on_exit_button_pressed() -> void:
+	SwitchScreen()
+
+func SwitchScreen() -> void:
+	if $DefaultCanvas.visible:
+		$DefaultCanvas.visible = false
+		$OnScreenCanvas.visible = true
+	else:
+		$DefaultCanvas.visible = true
+		$OnScreenCanvas.visible = false
+
+func _process(_delta):
+	$OnScreenCanvas/OnScreen/TopButtonsContainer/FpsLabel.text = str("FPS: ", Engine.get_frames_per_second())

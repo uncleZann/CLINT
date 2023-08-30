@@ -21,9 +21,9 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -58.0
-offset_top = -94.0
+offset_top = -104.0
 offset_right = 59.0
-offset_bottom = -68.0
+offset_bottom = -78.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_bo0vb")
@@ -31,7 +31,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Collect"
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
-position = Vector2(-0.499998, -17)
-scale = Vector2(7.25, 8.7)
+position = Vector2(-0.499998, -21)
+scale = Vector2(7.25, 9.1)
 
 [connection signal="pressed" from="Collect" to="." method="_on_collect_pressed"]

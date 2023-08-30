@@ -1,64 +1,32 @@
 extends Node
+
+signal gloablsChange
+
+var currentWorld
+
 # Ignore ------------- Ignore ------------- Ignore ------------- Ignore
 var worldExist1: bool
 var worldExist2: bool
 var worldExist3: bool
-func save_data():
+func save_data() -> void:
 	var to_save = gameDataforSaving.new()
 	to_save.worldExist1 = worldExist1
 	to_save.worldExist2 = worldExist2
 	to_save.worldExist3 = worldExist3
 	ResourceSaver.save(to_save, "user://general_data.tres")
-func load_data():
+func load_data() -> void:
 	var loaded = load("user://general_data.tres")
 	worldExist1 = loaded.worldExist1
 	worldExist2 = loaded.worldExist2
 	worldExist3 = loaded.worldExist3
 # Ignore ------------- Ignore ------------- Ignore ------------- Ignore
-#specific world
-var current_world
-signal gloablsChange
-signal decisionChanged
-var decisionAlreadySeen: Array:
-	get:
-		return decisionAlreadySeen
-	set(value):
-		decisionAlreadySeen = value
-		decisionChanged.emit()
-# Ignore ------------- Ignore ------------- Ignore ------------- Ignore
 
-var playerCash: int:
-	get:
-		return playerCash
-	set(value):
-		playerCash = value
-		gloablsChange.emit()
-var playerGold: int:
-	get:
-		return playerGold
-	set(value):
-		playerGold = value
-		gloablsChange.emit()
-var playerReputation: float
 
-func specific_world_save_data(file_path:String) -> void:
-	var to_save = gameDataforSaving.new()
-	to_save.playerCash = playerCash
-	to_save.playerGold = playerGold
-	to_save.decisionAlreadySeen = decisionAlreadySeen
-	to_save.playerReputation = playerReputation
-	ResourceSaver.save(to_save, file_path)
-func specific_world_load_data(file_path:String) -> void:
-	var loaded = load(file_path)
-	playerCash = loaded.playerCash
-	playerGold = loaded.playerGold
-	playerReputation = loaded.playerReputation
-	
-	#ignore
-	decisionAlreadySeen = loaded.decisionAlreadySeen
 
-# Ignore ------------- Ignore ------------- Ignore ------------- Ignore
-signal colisionDetectedSignal
+
+# Just Globals --- No Saving! ----------------- Just Globals --- No Saving!
+
+signal colisionDetectedSignal   # For Decisions V
 var colisionDetected: String:
 	get:
 		return colisionDetected
@@ -66,7 +34,7 @@ var colisionDetected: String:
 		colisionDetected = value
 		colisionDetectedSignal.emit()
 
-signal playerSpeedChange
+signal playerSpeedChange  #For Freezing Player on Decisions
 var playerSpeed: int:
 	get:
 		return playerSpeed
@@ -74,9 +42,11 @@ var playerSpeed: int:
 		playerSpeed = value
 		playerSpeedChange.emit()
 
-var MainPlacmentTilemap: TileMap:
+var MainPlacmentTilemap: TileMap: #Main tilemap for knowing where to place stuff
 	get:
 		return MainPlacmentTilemap
 	set(value):
 		MainPlacmentTilemap = value
 		gloablsChange.emit()
+
+# Just Globals --- No Saving! ----------------- Just Globals --- No Saving!

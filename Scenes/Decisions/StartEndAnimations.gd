@@ -1,10 +1,9 @@
 extends AnimationPlayer
 
-
-func playAnimation(name: String, forward: bool) -> void:
+func playAnimation(animname: String, forward: bool) -> void:
 	if forward:
 		Globals.playerSpeed = 0
-		$".".play(name)
+		$".".play(animname)
 	else:
 		Globals.playerSpeed = 550
-		$".".play_backwards(name)
+		$".".play_backwards(animname)

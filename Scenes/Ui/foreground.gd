@@ -1,24 +1,21 @@
 extends Node2D
 
 var decisionAlreadySeen: Array
+var worldData: WorldData
 
-#NoTouch --------------------------------------------------------------
+#NoTouch -------------------------------------------------------------- # Decisions
 const filePath = "res://Scenes/Decisions/decisionsData.tres"
 var decisionsDict = {}
 func _ready():
 	if FileAccess.file_exists(filePath):
 		var loaded = load(filePath)
 		decisionsDict = loaded.decisionsDict
-		Globals.connect("decisionChanged", decisionChanged)
-		decisionChanged()
+		worldData = WorldData.load_or_create(Globals.currentWorld)
 	else:
 		#load from web -- WIP
 		print("Your Decisions file is mising")
-#NoTouch --------------------------------------------------------------
-
-func decisionChanged():
-	decisionAlreadySeen = Globals.decisionAlreadySeen
-
+#NoTouch -------------------------------------------------------------- # Decisions
+####################
 var chosenDecision: int
 #Decisions Data
 var keywords: Array
@@ -27,7 +24,6 @@ var dec1: String
 var dec2: String
 var consequence1: Dictionary
 var consequence2: Dictionary
-
 func decisionsDictLoaded():
 	keywords = decisionsDict[chosenDecision]["KEYWORDS"]
 	storydecision = decisionsDict[chosenDecision]["STORYDECISION"]
@@ -35,25 +31,19 @@ func decisionsDictLoaded():
 	dec2 = decisionsDict[chosenDecision]["DEC2"]
 	consequence1 = decisionsDict[chosenDecision]["CONSEQUENCE1"]
 	consequence2 = decisionsDict[chosenDecision]["CONSEQUENCE2"]
-
-# DecisionsLogic()  -  variables
 var rng = RandomNumberGenerator.new()
 func DecisionsLogic():
 	chosenDecision = rng.randi_range(1, decisionsDict.size())
-
 	if not decisionsDict.size() == decisionAlreadySeen.size():
 		if not chosenDecision in decisionAlreadySeen:  #if the random num isnt in the array, it saves it and makes a world
 			decisionAlreadySeen.append(chosenDecision) #adds it to the array
-			Globals.decisionAlreadySeen = decisionAlreadySeen #saves it to globals
+			worldData.decisionAlreadySeen = decisionAlreadySeen #saves it to the speciufc world singleton
 			decisionsDictLoaded() #calls
-			keywordsfunc()   #calls -- kinda usless
-			storyfunc() #calls
+			START_INTERACTION()
 		else:
-			print("trying again")
 			DecisionsLogic() #trys again
 	else:
 		print("you have gone trough all the decisions")
-		
 func _on_story_detectors_story_detected():
 	DecisionsLogic()
 
@@ -65,14 +55,17 @@ func _on_story_detectors_story_detected():
 @onready var options = $CanvasLayer/SizeControll/Options
 @onready var option1: Button = $CanvasLayer/SizeControll/Options/HBoxContainer/option1
 @onready var option2: Button = $CanvasLayer/SizeControll/Options/HBoxContainer/option2
-
+func START_INTERACTION():
+	$CanvasLayer.visible = true
+	storyfunc() #calls
+func storyfunc():    #add voice here
+	keywordsfunc()
+	mainText.text = storydecision
+	start_dialogue()
 func keywordsfunc() -> void:
 	$StartEndAnimations.play("default")
 	for i in keywords:
 		animationPlayer.play(i)
-func storyfunc():    #add voice here
-	mainText.text = storydecision
-	start_dialogue()
 func decisionfunc():
 	options.visible = true
 	option1.text = dec1
@@ -88,75 +81,84 @@ func _on_option_2_pressed() -> void:
 
 var itsEnding = false
 # Ignore ------------- Ignore ------------- Ignore ------------- Ignore
-
-
-
-# Touch ------------- Touch ------------- Touch ------------- Touch
 func consequenceResoult(consequence: Dictionary) -> void:
-	
 	if consequence.has("time"):
 		if consequence["time"]:
 			mainText.text = consequence["consequenceText"]
 			start_dialogue()
-			mainText.text = "Now you wait (:"
-			start_dialogue()
-			await get_tree().create_timer(20).timeout
+			await get_tree().create_timer(3).timeout
 			endInteraction()
 		else:
 			mainText.text = consequence["consequenceText"]
 			itsEnding = true
 			start_dialogue()
-	
+
 	if consequence.has("reputation"):
 		if consequence["reputation"]:
-			print("+ reputation")
+			worldData.playerReputation += 0.1
+			saveConsequence()
 		else:
-			print("- reputation")
+			worldData.playerReputation -= 0.1
+			saveConsequence()
 
 	if consequence.has("socialconnections"):
 		if consequence["socialconnections"]:
-			print("+ socialconnections")
+			worldData.socialconnections += 0.1
+			saveConsequence()
 		else:
-			print("- socialconnections")
-		
+			worldData.socialconnections -= 0.1
+			saveConsequence()
+
 	if consequence.has("playercash"):
 		if consequence["playercash"]:
-			print("+ playercash")
+			worldData.playerCash += 0.1
+			saveConsequence()
 		else:
-			print("- playercash")
-	
+			worldData.playerCash -= 0.1
+			saveConsequence()
+
 	if consequence.has("socialconnections"):
 		if consequence["socialconnections"]:
-			print("+ socialconnections")
+			worldData.socialconnections += 0.1
+			saveConsequence()
 		else:
-			print("- socialconnections")
+			worldData.socialconnections -= 0.1
+			saveConsequence()
 
 	if consequence.has("playergold"):
 		if consequence["playergold"]:
-			print("+ playergold")
+			worldData.playerGold += 0.1
+			saveConsequence()
 		else:
-			print("- playergold")
+			worldData.playerGold -= 0.1
+			saveConsequence()
 
 	if consequence.has("fitnesslevel"):
 		if consequence["fitnesslevel"]:
-			print("+ fitnesslevel")
+			worldData.fitnesslevel += 0.1
+			saveConsequence()
 		else:
-			print("- fitnesslevel")
+			worldData.fitnesslevel -= 0.1
+			saveConsequence()
 
 	if consequence.has("health"):
 		if consequence["health"]:
-			print("+ health")
+			worldData.health += 0.1
+			saveConsequence()
 		else:
-			print("- health")
+			worldData.health -= 0.1
+			saveConsequence()
 
 	if consequence.has("knowledge"):
 		if consequence["knowledge"]:
-			print("+ knowledge")
+			worldData.knowledge += 0.1
+			saveConsequence()
 		else:
-			print("- knowledge")
-# Touch ------------- Touch ------------- Touch ------------- Touch
+			worldData.knowledge -= 0.1
+			saveConsequence()
 
-
+func saveConsequence():
+	worldData.save(Globals.currentWorld)
 
 # Ignore ------------- Ignore ------------- Ignore ------------- Ignore
 func endInteraction() -> void:
@@ -167,7 +169,7 @@ func endInteraction() -> void:
 	mainText.text = ""
 	option1.disabled = false
 	option2.disabled = false
-
+	$CanvasLayer.visible = false
 func start_dialogue() -> void:
 	mainText.visible_ratio = 0
 	while mainText.visible_ratio < 1:
@@ -179,4 +181,3 @@ func start_dialogue() -> void:
 		await get_tree().create_timer(1).timeout
 		endInteraction()
 		itsEnding = false
-#Typing # Ignore ------------- Ignore ------------- Ignore ------------- Ignore
