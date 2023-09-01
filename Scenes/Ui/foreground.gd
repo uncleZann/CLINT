@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 var decisionAlreadySeen: Array
 var worldData: WorldData
@@ -44,7 +44,7 @@ func DecisionsLogic():
 			DecisionsLogic() #trys again
 	else:
 		print("you have gone trough all the decisions")
-func _on_story_detectors_story_detected():
+func _on_questionmark_button_pressed():
 	DecisionsLogic()
 
 #NoTouch --------------------------------------------------------------
@@ -53,8 +53,10 @@ func _on_story_detectors_story_detected():
 @onready var animationPlayer = $FullAnimations
 @onready var mainText: RichTextLabel = $CanvasLayer/SizeControll/mainText/RichTextLabel
 @onready var options = $CanvasLayer/SizeControll/Options
-@onready var option1: Button = $CanvasLayer/SizeControll/Options/HBoxContainer/option1
-@onready var option2: Button = $CanvasLayer/SizeControll/Options/HBoxContainer/option2
+@onready var option1: Label = $CanvasLayer/SizeControll/Options/HBoxContainer/option1/option1Label
+@onready var option2: Label = $CanvasLayer/SizeControll/Options/HBoxContainer/option2/option2Label
+@onready var option1Button: Button = $CanvasLayer/SizeControll/Options/HBoxContainer/option1
+@onready var option2Button: Button = $CanvasLayer/SizeControll/Options/HBoxContainer/option2
 func START_INTERACTION():
 	$CanvasLayer.visible = true
 	storyfunc() #calls
@@ -67,17 +69,18 @@ func keywordsfunc() -> void:
 	for i in keywords:
 		animationPlayer.play(i)
 func decisionfunc():
+	print("run")
 	options.visible = true
 	option1.text = dec1
 	option2.text = dec2
 func _on_option_1_pressed() -> void:
 	consequenceResoult(consequence1)
-	option1.disabled = true
-	option2.disabled = true
+	option1Button.disabled = true
+	option2Button.disabled = true
 func _on_option_2_pressed() -> void:
 	consequenceResoult(consequence2)
-	option1.disabled = true
-	option2.disabled = true
+	option1Button.disabled = true
+	option2Button.disabled = true
 
 var itsEnding = false
 # Ignore ------------- Ignore ------------- Ignore ------------- Ignore
@@ -86,7 +89,6 @@ func consequenceResoult(consequence: Dictionary) -> void:
 		if consequence["time"]:
 			mainText.text = consequence["consequenceText"]
 			start_dialogue()
-			await get_tree().create_timer(3).timeout
 			endInteraction()
 		else:
 			mainText.text = consequence["consequenceText"]
@@ -94,6 +96,7 @@ func consequenceResoult(consequence: Dictionary) -> void:
 			start_dialogue()
 
 	if consequence.has("reputation"):
+		print(consequence["reputation"])
 		if consequence["reputation"]:
 			worldData.playerReputation += 0.1
 			saveConsequence()
@@ -167,8 +170,8 @@ func endInteraction() -> void:
 	for i in keywords:
 		animationPlayer.play(i + "b")
 	mainText.text = ""
-	option1.disabled = false
-	option2.disabled = false
+	option1Button.disabled = false
+	option2Button.disabled = false
 	$CanvasLayer.visible = false
 func start_dialogue() -> void:
 	mainText.visible_ratio = 0
@@ -178,6 +181,6 @@ func start_dialogue() -> void:
 	await get_tree().create_timer(1).timeout
 	decisionfunc()
 	if itsEnding:
-		await get_tree().create_timer(1).timeout
+		await get_tree().create_timer(4).timeout
 		endInteraction()
 		itsEnding = false

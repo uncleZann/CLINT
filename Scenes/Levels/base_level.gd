@@ -5,9 +5,15 @@ func _ready() -> void:
 	Globals.MainPlacmentTilemap = $MainPlacmentTilemap
 	spawnItems()
 
+var isInEscapeMenu: bool = false
 func _process(_delta) -> void:
 	if Input.is_action_just_pressed("escape"): #Just checks if escape is pressed
-		$Ui/EscapeMenu.visible = true
+		if not isInEscapeMenu:
+			$Ui/CanvasLayer/escapeMenu.visible = true
+			isInEscapeMenu = true
+		else:
+			$Ui/CanvasLayer/escapeMenu.visible = false
+			isInEscapeMenu = false
 
 func _on_escape_menu_resume_pressed() -> void:  #Gets signal from "escapeMenu" and hides it
 	$Ui/EscapeMenu.visible = false

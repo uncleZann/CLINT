@@ -1,7 +1,7 @@
 extends Camera2D
 
 var TargetZoom: float = 1.0
-const MinimumZoom: float = 0.01#0.4
+const MinimumZoom: float = 0.01
 const MaxZoom: float = 2.8
 const ZoomIncrement: float = 0.1
 const ZoomRate: float = 10
@@ -9,6 +9,15 @@ const ZoomRate: float = 10
 var speed = 500
 
 func _process(delta):
+	Globals.cameraPosition = position
+	
+#	var test = $".".get_screen_center_position()
+#	print(get_viewport().size)
+#	print(get_viewport().size.x / 2)
+#	print(test)
+	#print(test - global_position)
+	
+	
 	if Input.is_action_pressed("control"):
 		speed = 5200
 	else:

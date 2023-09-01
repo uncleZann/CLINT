@@ -74,6 +74,7 @@ Button/styles/normal = SubResource("StyleBoxFlat_wf7na")
 Button/styles/pressed = SubResource("StyleBoxFlat_k1g4t")
 
 [node name="escapeMenu" type="Control"]
+visible = false
 light_mask = 32
 visibility_layer = 32
 layout_mode = 3
@@ -99,7 +100,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.729412, 0.439216, 0.309804, 0.741176)
+color = Color(0.729412, 0.439216, 0.309804, 0.909804)
 
 [node name="saveMenu" type="Panel" parent="."]
 layout_mode = 1

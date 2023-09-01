@@ -3,8 +3,8 @@ extends TileMap
 var moisture = FastNoiseLite.new()
 var temperature = FastNoiseLite.new()
 var altitude = FastNoiseLite.new()
-var width =  1000
-var height =  1000
+var width =  50
+var height =  50
 
 func _ready():
 	moisture.seed = randi()
@@ -29,14 +29,14 @@ func generate_chunk():
 				@warning_ignore("integer_division", "narrowing_conversion")
 				set_cell(0, Vector2i(tile_pos.x-width/2.0 + x, tile_pos.y-height/2.0 + y), 0.0, Vector2(round((moist+10.0)/5.0), round((temp+10.0)/5.0)))
 	itemSpawner()
+	DecisionsSpawner()
 
-var item = preload("res://Scenes/Items/test_item.tscn")
+
+var usedPlacmentPoints: Array = []
 
 func itemSpawner():
-	var usedPlacmentPoints: Array = []
-	
-	for i in 2500:
-		await get_tree().create_timer(0.01).timeout
+	var item = preload("res://Scenes/Items/test_item.tscn")
+	for i in 3:
 		var cells = get_used_cells(0)
 		var cellsSize = cells.size()
 		var randomCell = cells[randi_range(1, cellsSize)]
@@ -44,9 +44,33 @@ func itemSpawner():
 		var world_pos = to_global(local_pos)
 		var itemPosition = Vector2(world_pos.x, world_pos.y)
 		
-		if not itemPosition in usedPlacmentPoints:
-			var theItem = item.instantiate()
-			theItem.position = itemPosition
-			owner.add_child.call_deferred(theItem)
-			usedPlacmentPoints.append(itemPosition)
+
+		var tile_name = get_cell_tile_data(0, randomCell)
+		if tile_name:
+			if not tile_name.probability > 1:
+				if not itemPosition in usedPlacmentPoints:
+					var theItem = item.instantiate()
+					theItem.position = itemPosition
+					owner.add_child.call_deferred(theItem)
+					usedPlacmentPoints.append(itemPosition)
 	
+func DecisionsSpawner():
+	var questionMark = preload("res://Scenes/Decisions/story_detectors.tscn")
+	for i in 20:
+		var cells = get_used_cells(0)
+		var cellsSize = cells.size()
+		var randomCell = cells[randi_range(1, cellsSize)]
+		var local_pos = map_to_local(randomCell)
+		var world_pos = to_global(local_pos)
+		var itemPosition = Vector2(world_pos.x, world_pos.y)
+
+
+		var tile_name = get_cell_tile_data(0, randomCell)
+		if tile_name:
+			if not tile_name.probability > 1:
+				if not itemPosition in usedPlacmentPoints:
+					var theItem = questionMark.instantiate()
+					theItem.position = itemPosition
+					owner.add_child.call_deferred(theItem)
+					theItem.storyDetected.connect(owner.get_node("Ui/Foreground")._on_questionmark_button_pressed)
+					usedPlacmentPoints.append(itemPosition)

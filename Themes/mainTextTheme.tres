@@ -1,7 +1,7 @@
 [gd_resource type="Theme" load_steps=7 format=3 uid="uid://c6qj4gpqpe15"]
 
 [ext_resource type="StyleBox" uid="uid://daxr3pfl04oy0" path="res://Themes/hover.tres" id="1_nuteo"]
-[ext_resource type="FontFile" uid="uid://dhkt28cwcslm6" path="res://Fonts/SpicySushi-L3MnE.ttf" id="1_vtx5e"]
+[ext_resource type="FontFile" uid="uid://dfvwiu1e8h4yh" path="res://Fonts/Ubuntu/Ubuntu-Regular.ttf" id="2_ydnhk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6hb0m"]
 bg_color = Color(0.211765, 0.372549, 0.498039, 1)
@@ -50,7 +50,7 @@ shadow_size = 4
 shadow_offset = Vector2(2, 2)
 
 [resource]
-default_font = ExtResource("1_vtx5e")
+default_font = ExtResource("2_ydnhk")
 default_font_size = 50
 Button/styles/disabled = SubResource("StyleBoxFlat_6hb0m")
 Button/styles/focus = SubResource("StyleBoxFlat_bmjqj")

@@ -1,0 +1,236 @@
+[gd_scene load_steps=12 format=3 uid="uid://dp2l3c7jgfrtv"]
+
+[ext_resource type="Theme" uid="uid://c6qj4gpqpe15" path="res://Themes/mainTextTheme.tres" id="1_qip66"]
+[ext_resource type="Script" path="res://Scenes/Ui/header_menu.gd" id="1_scvom"]
+[ext_resource type="Texture2D" uid="uid://bdlj355pl5sq" path="res://Resources/Ui/headerIcon.png" id="1_wixyp"]
+[ext_resource type="Texture2D" uid="uid://c2bkgiltnamaf" path="res://Resources/Ui/plusIcon.png" id="2_cw0f7"]
+[ext_resource type="Texture2D" uid="uid://cq3h00iij7u4e" path="res://Resources/Ui/searchIcon.png" id="3_d4jcr"]
+[ext_resource type="Texture2D" uid="uid://bqo1ddkw3r5ul" path="res://Resources/Ui/menuIcon.png" id="4_3p8ja"]
+[ext_resource type="Texture2D" uid="uid://df1jpiaqte244" path="res://Resources/Ui/minusIcon.png" id="5_0hkos"]
+[ext_resource type="FontFile" uid="uid://8bksfvxx3q6x" path="res://Fonts/UbuntuMono/UbuntuMono-Regular.ttf" id="5_m1hhl"]
+[ext_resource type="Texture2D" uid="uid://6wp1cmw8pwfl" path="res://Resources/Ui/fullscreenIcon.png" id="6_s2tgy"]
+[ext_resource type="Texture2D" uid="uid://b42446r51snbx" path="res://Resources/Ui/closeIcon.png" id="7_l7mrh"]
+
+[sub_resource type="Theme" id="Theme_f7iv8"]
+default_font = ExtResource("5_m1hhl")
+default_font_size = 18
+
+[node name="HeaderMenu" type="CanvasLayer"]
+script = ExtResource("1_scvom")
+
+[node name="Default" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 82.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="ColorRect" type="ColorRect" parent="Default"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0, 0, 0, 0.423529)
+
+[node name="Bottom" type="HBoxContainer" parent="Default/ColorRect"]
+layout_mode = 2
+offset_left = 50.0
+offset_top = 47.0
+offset_right = 1102.0
+offset_bottom = 546.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="Default/ColorRect/Bottom"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Default/ColorRect/Bottom/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="Default/ColorRect/Bottom/ColorRect/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("1_qip66")
+text = "number 1"
+
+[node name="ColorRect2" type="ColorRect" parent="Default/ColorRect/Bottom"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[node name="ColorRect3" type="ColorRect" parent="Default/ColorRect/Bottom"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[node name="Header" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 82.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LabelMarginContainer" type="MarginContainer" parent="Header"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Header/LabelMarginContainer"]
+layout_mode = 2
+theme = SubResource("Theme_f7iv8")
+text = "Clint@Clint-Ubuntu: ~"
+horizontal_alignment = 1
+
+[node name="Header" type="TextureRect" parent="Header"]
+self_modulate = Color(1, 1, 1, 0.807843)
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_wixyp")
+expand_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Header"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.018
+anchor_top = -0.04
+anchor_right = 1.0
+anchor_bottom = 0.163
+offset_left = 45.736
+offset_top = 8.2
+offset_right = -25.0
+offset_bottom = 56.554
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="PlusMarginContainer" type="MarginContainer" parent="Header/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.07
+
+[node name="plusButton" type="Button" parent="Header/HBoxContainer/PlusMarginContainer"]
+layout_mode = 2
+icon = ExtResource("2_cw0f7")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="LabelMarginContainer" type="MarginContainer" parent="Header/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Header/HBoxContainer/LabelMarginContainer"]
+layout_mode = 2
+theme = SubResource("Theme_f7iv8")
+horizontal_alignment = 1
+
+[node name="SearchMarginContainer" type="MarginContainer" parent="Header/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.07
+
+[node name="searchButton" type="Button" parent="Header/HBoxContainer/SearchMarginContainer"]
+layout_mode = 2
+icon = ExtResource("3_d4jcr")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="menuMarginContainer" type="MarginContainer" parent="Header/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.07
+
+[node name="menuButton" type="Button" parent="Header/HBoxContainer/menuMarginContainer"]
+layout_mode = 2
+icon = ExtResource("4_3p8ja")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="MarginContainer3" type="MarginContainer" parent="Header/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.08
+
+[node name="minusMarginContainer" type="MarginContainer" parent="Header/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.06
+
+[node name="minusButton" type="Button" parent="Header/HBoxContainer/minusMarginContainer"]
+layout_mode = 2
+icon = ExtResource("5_0hkos")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="Header/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.01
+
+[node name="screenMarginContainer" type="MarginContainer" parent="Header/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.06
+
+[node name="screenButton" type="Button" parent="Header/HBoxContainer/screenMarginContainer"]
+layout_mode = 2
+focus_mode = 0
+icon = ExtResource("6_s2tgy")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Header/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.01
+
+[node name="closeMarginContainer" type="MarginContainer" parent="Header/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.07
+
+[node name="closeButton" type="Button" parent="Header/HBoxContainer/closeMarginContainer"]
+layout_mode = 2
+icon = ExtResource("7_l7mrh")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="Default/ColorRect/Bottom/ColorRect/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Header/HBoxContainer/menuMarginContainer/menuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="Header/HBoxContainer/screenMarginContainer/screenButton" to="." method="_on_screen_button_pressed"]
+[connection signal="pressed" from="Header/HBoxContainer/closeMarginContainer/closeButton" to="." method="_on_close_button_pressed"]

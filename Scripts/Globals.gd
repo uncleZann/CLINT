@@ -26,6 +26,8 @@ func load_data() -> void:
 
 # Just Globals --- No Saving! ----------------- Just Globals --- No Saving!
 
+var cameraPosition
+
 signal colisionDetectedSignal   # For Decisions V
 var colisionDetected: String:
 	get:
@@ -33,14 +35,6 @@ var colisionDetected: String:
 	set(value):
 		colisionDetected = value
 		colisionDetectedSignal.emit()
-
-signal playerSpeedChange  #For Freezing Player on Decisions
-var playerSpeed: int:
-	get:
-		return playerSpeed
-	set(value):
-		playerSpeed = value
-		playerSpeedChange.emit()
 
 var MainPlacmentTilemap: TileMap: #Main tilemap for knowing where to place stuff
 	get:

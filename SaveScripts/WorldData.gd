@@ -41,11 +41,12 @@ class_name  WorldData
 #################################################################################
 
 static func load_or_create(path) -> WorldData:
+	
+	#DirAccess.make_dir_absolute(path)
 	var res: WorldData = load(path) as WorldData
 	if !res:
 		res = WorldData.new()
-		print(res)
 	return res
-	
+
 func save(path) -> void:
 	ResourceSaver.save(self, path)

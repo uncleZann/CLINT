@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://c113iciuq54id"]
+[gd_scene load_steps=16 format=3 uid="uid://c113iciuq54id"]
 
 [ext_resource type="Script" path="res://Scenes/Ui/menu.gd" id="1_pqk0r"]
+[ext_resource type="Texture2D" uid="uid://cy745kg0w7kd2" path="res://Branding/mainBackground.png" id="2_6p2pm"]
 [ext_resource type="Theme" uid="uid://c6qj4gpqpe15" path="res://Themes/mainTextTheme.tres" id="2_cm52q"]
 [ext_resource type="FontFile" uid="uid://dhkt28cwcslm6" path="res://Fonts/SpicySushi-L3MnE.ttf" id="4_lr8h8"]
 [ext_resource type="Theme" uid="uid://bxc0tsxn6mdmk" path="res://Themes/menuTheme.tres" id="5_fdp1x"]
@@ -130,6 +131,7 @@ offset_right = 146.0
 offset_bottom = 55.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_6p2pm")
 expand_mode = 3
 
 [node name="BackgroundBlur" type="ColorRect" parent="Background"]
@@ -142,7 +144,6 @@ grow_vertical = 2
 color = Color(0.729412, 0.439216, 0.309804, 0.741176)
 
 [node name="mainMenu" type="Panel" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
@@ -228,6 +229,7 @@ theme = ExtResource("2_cm52q")
 text = "Back"
 
 [node name="playMenu" type="Panel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

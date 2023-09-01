@@ -5,3 +5,4 @@ signal storyDetected
 
 func _on_questionmark_button_pressed():
 	storyDetected.emit()
+	queue_free()

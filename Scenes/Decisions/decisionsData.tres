@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="allOfTheDecisions" load_steps=2 format=3 uid="uid://bt7s4yyde4fd3"]
 
-[ext_resource type="Script" path="res://Scripts/allOfTheDecisions.gd" id="1_ukb28"]
+[ext_resource type="Script" path="res://SaveScripts/allOfTheDecisions.gd" id="1_ukb28"]
 
 [resource]
 script = ExtResource("1_ukb28")

@@ -1,84 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b03tnpxj54ny1"]
+[gd_scene load_steps=3 format=3 uid="uid://b03tnpxj54ny1"]
 
 [ext_resource type="PackedScene" uid="uid://ccsu001uhr6dw" path="res://Scenes/Items/base_item.tscn" id="1_ow4dx"]
-
-[sub_resource type="Animation" id="Animation_i4e5p"]
-resource_name = "default"
-length = 2.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Visuals:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(-64, -64), Vector2(-64, -74), Vector2(-64, -64)]
-}
-
-[sub_resource type="Animation" id="Animation_er4wi"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Visuals:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-64, -64)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_0kh5h"]
-_data = {
-"RESET": SubResource("Animation_er4wi"),
-"default": SubResource("Animation_i4e5p")
-}
+[ext_resource type="Texture2D" uid="uid://c4upoi23ebr2u" path="res://Resources/stump-576907_640.png" id="2_1ol1g"]
 
 [node name="TestItem" instance=ExtResource("1_ow4dx")]
 
-[node name="Visuals" type="ColorRect" parent="." index="1"]
-offset_left = -64.0
-offset_top = -64.0
-offset_right = 64.0
-offset_bottom = 64.0
-color = Color(0, 0, 0, 1)
-
-[node name="RedOutside" type="ColorRect" parent="Visuals" index="0"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 2.0
-offset_top = 2.0
-offset_right = -2.0
-offset_bottom = -2.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(1, 0, 0, 1)
-
-[node name="BlackInside" type="ColorRect" parent="Visuals" index="1"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -10.0
-offset_top = -10.0
-offset_right = 10.0
-offset_bottom = 10.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]
-autoplay = "default"
-libraries = {
-"": SubResource("AnimationLibrary_0kh5h")
-}
+[node name="Sprite2D" type="Sprite2D" parent="." index="3"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_1ol1g")
