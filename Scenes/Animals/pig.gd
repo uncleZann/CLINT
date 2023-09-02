@@ -1,10 +1,13 @@
 extends CharacterBody2D
 
-var speed = 100.0
-var pigDirection = 1
+var speed = 100.0 #Pig speed
+var pigDirection = 1 # Where the pig is facing
 
+# Calls switch() on initialization
 func _ready():
 	switch()
+
+# Animal Movement
 func _process(delta):
 	if pigDirection == 0:
 		velocity.x = move_toward(speed, 0.0, delta)
@@ -16,8 +19,11 @@ func _process(delta):
 	velocity.y += 500 * delta
 	move_and_slide()
 
+# Detects the Timer timeout
 func _on_timer_timeout() -> void:
 	switch()
+
+# The Switching of random directions
 func switch() -> void:
 	pigDirection = randi_range(0, 1)
 	$Timer.wait_time = randi_range(3, 15)

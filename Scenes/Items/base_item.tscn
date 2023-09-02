@@ -1,10 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://ccsu001uhr6dw"]
+[gd_scene load_steps=6 format=3 uid="uid://ccsu001uhr6dw"]
 
 [ext_resource type="Script" path="res://Scenes/Items/base_item.gd" id="1_awnpt"]
-[ext_resource type="Theme" uid="uid://dn6sruqi8nekc" path="res://Scenes/Ui/itemsTheme.tres" id="2_bo0vb"]
+[ext_resource type="FontFile" uid="uid://cxtcx7fhknxo6" path="res://Fonts/extreme.ttf" id="2_ljeul"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rspg6"]
 size = Vector2(124, 124)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lljwy"]
+bg_color = Color(0.662745, 0.662745, 0.662745, 1)
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.54902, 0.54902, 0.54902, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_top = 3.0
+
+[sub_resource type="Theme" id="Theme_jkpkk"]
+default_font = ExtResource("2_ljeul")
+default_font_size = 23
+Button/styles/normal = SubResource("StyleBoxFlat_lljwy")
 
 [node name="BaseItem" type="Node2D"]
 y_sort_enabled = true
@@ -26,7 +42,7 @@ offset_right = 59.0
 offset_bottom = -78.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("2_bo0vb")
+theme = SubResource("Theme_jkpkk")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Collect"
 

@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://dpe5u2i8nnie2"]
+
+[ext_resource type="FontFile" uid="uid://8bksfvxx3q6x" path="res://Fonts/UbuntuMono/UbuntuMono-Regular.ttf" id="1_2pjlo"]
+
+[resource]
+font = ExtResource("1_2pjlo")
+font_size = 35

@@ -1,10 +1,10 @@
-extends TileMap
+extends TileMap #For world gen, and spawning
 
 var moisture = FastNoiseLite.new()
 var temperature = FastNoiseLite.new()
 var altitude = FastNoiseLite.new()
-var width =  50
-var height =  50
+var width =  200
+var height =  200
 
 func _ready():
 	moisture.seed = randi()
@@ -12,7 +12,6 @@ func _ready():
 	altitude.seed = randi()
 	altitude.frequency = 0.005
 	generate_chunk()
-	
 
 func generate_chunk():
 	var tile_pos = local_to_map(position)
@@ -31,15 +30,14 @@ func generate_chunk():
 	itemSpawner()
 	DecisionsSpawner()
 
-
 var usedPlacmentPoints: Array = []
 
 func itemSpawner():
 	var item = preload("res://Scenes/Items/test_item.tscn")
-	for i in 3:
+	for i in 600:
 		var cells = get_used_cells(0)
 		var cellsSize = cells.size()
-		var randomCell = cells[randi_range(1, cellsSize)]
+		var randomCell = cells[randi_range(1, cellsSize - 1000)]
 		var local_pos = map_to_local(randomCell)
 		var world_pos = to_global(local_pos)
 		var itemPosition = Vector2(world_pos.x, world_pos.y)
@@ -53,10 +51,10 @@ func itemSpawner():
 					theItem.position = itemPosition
 					owner.add_child.call_deferred(theItem)
 					usedPlacmentPoints.append(itemPosition)
-	
+
 func DecisionsSpawner():
 	var questionMark = preload("res://Scenes/Decisions/story_detectors.tscn")
-	for i in 20:
+	for i in 15:
 		var cells = get_used_cells(0)
 		var cellsSize = cells.size()
 		var randomCell = cells[randi_range(1, cellsSize)]

@@ -26,8 +26,6 @@ func load_data() -> void:
 
 # Just Globals --- No Saving! ----------------- Just Globals --- No Saving!
 
-var cameraPosition
-
 signal colisionDetectedSignal   # For Decisions V
 var colisionDetected: String:
 	get:

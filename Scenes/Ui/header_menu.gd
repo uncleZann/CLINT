@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 
-
+#BUTTON INPUTS
 func _on_menu_button_pressed():
 	menuVisibility(true)
 
@@ -13,7 +13,7 @@ func _on_close_button_pressed():
 
 func _on_button_pressed():
 	spawnItem()
-
+#/BUTTON INPUTS/
 
 
 func spawnItem():
@@ -25,7 +25,6 @@ func spawnItem():
 
 func menuVisibility(isVisible: bool):
 	$Default.visible = isVisible
-
 
 var isInFullScreen = false
 func _on_screen_button_pressed():

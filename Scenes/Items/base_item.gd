@@ -1,4 +1,4 @@
-extends Node2D
+extends Node2D  #Just a parent scene, for all the in-game items, that will be in the world
 class_name base_item
 
 # Buttons ------------ Buttons ------------ Buttons ------------ Buttons ------------ Buttons

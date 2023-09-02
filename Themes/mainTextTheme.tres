@@ -1,7 +1,6 @@
 [gd_resource type="Theme" load_steps=7 format=3 uid="uid://c6qj4gpqpe15"]
 
-[ext_resource type="StyleBox" uid="uid://daxr3pfl04oy0" path="res://Themes/hover.tres" id="1_nuteo"]
-[ext_resource type="FontFile" uid="uid://dfvwiu1e8h4yh" path="res://Fonts/Ubuntu/Ubuntu-Regular.ttf" id="2_ydnhk"]
+[ext_resource type="FontFile" uid="uid://8bksfvxx3q6x" path="res://Fonts/UbuntuMono/UbuntuMono-Regular.ttf" id="2_isof2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6hb0m"]
 bg_color = Color(0.211765, 0.372549, 0.498039, 1)
@@ -24,6 +23,8 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 shadow_size = 4
 shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uwxcy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0v6ig"]
 bg_color = Color(0.356863, 0.560784, 0.72549, 1)
@@ -50,10 +51,10 @@ shadow_size = 4
 shadow_offset = Vector2(2, 2)
 
 [resource]
-default_font = ExtResource("2_ydnhk")
+default_font = ExtResource("2_isof2")
 default_font_size = 50
 Button/styles/disabled = SubResource("StyleBoxFlat_6hb0m")
 Button/styles/focus = SubResource("StyleBoxFlat_bmjqj")
-Button/styles/hover = ExtResource("1_nuteo")
+Button/styles/hover = SubResource("StyleBoxFlat_uwxcy")
 Button/styles/normal = SubResource("StyleBoxFlat_0v6ig")
 Button/styles/pressed = SubResource("StyleBoxFlat_k1g4t")

@@ -1,33 +1,26 @@
-extends Camera2D
+extends Camera2D #For camera movment
 
 var TargetZoom: float = 1.0
-const MinimumZoom: float = 0.01
+const MinimumZoom: float = 0.4
 const MaxZoom: float = 2.8
 const ZoomIncrement: float = 0.1
 const ZoomRate: float = 10
 
-var speed = 500
+var speed = 200
 
 func _process(delta):
-	Globals.cameraPosition = position
-	
-#	var test = $".".get_screen_center_position()
-#	print(get_viewport().size)
-#	print(get_viewport().size.x / 2)
-#	print(test)
-	#print(test - global_position)
-	
-	
+			# Camera WASD Movment
 	if Input.is_action_pressed("control"):
-		speed = 5200
+		speed = 300
 	else:
-		speed = 500
+		speed = 200
 	var directionx = Input.get_axis("left", "right")
 	var directiony = Input.get_axis("up", "down")
 	if directionx:
 		position.x += directionx * speed * delta
 	if directiony:
 		position.y += directiony * speed * delta
+	# /Camera WASD Movment/
 
 func _physics_process(delta) -> void:
 	zoom = lerp(zoom, TargetZoom * Vector2.ONE, ZoomRate * delta)
@@ -36,7 +29,7 @@ func _physics_process(delta) -> void:
 func _unhandled_input(event) -> void:
 	if event is InputEventMouseMotion:
 		if event.button_mask == MOUSE_BUTTON_MASK_MIDDLE:
-				position -= event.relative / zoom
+				position -= (event.relative / zoom) * 0.2
 	
 	if event is InputEventMouseButton:
 		if event.is_pressed():

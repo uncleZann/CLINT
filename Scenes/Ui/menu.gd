@@ -99,7 +99,6 @@ func _on_start_new_3_pressed() -> void:
 
 #SUB-FUNCTIONS
 func change_scene_to_world() -> void: #Changes scene to our Home World
-	Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)
 	get_tree().change_scene_to_file("res://Scenes/Levels/main_home_level.tscn")
 
 func _on_delete_world_1_pressed() -> void:

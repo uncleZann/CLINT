@@ -1,4 +1,4 @@
-extends base_item
+extends base_item # A parent scene, for item that you will be a able to place and buy
 
 @onready var mainArea: Area2D = $MainCollisionArea
 var tilemap: TileMap
@@ -10,12 +10,8 @@ func _process(_delta) -> void: #Called every frame
 	itemMoving()
 	itemPlacing()
 
-func itemMoving() -> void:  #For moving the item on the screen
-		#print(get_viewport().size)
-#		print(get_global_mouse_position().clamp(Vector2.ZERO, get_viewport().size))
-#		print(get_global_mouse_position())
-#.clamp(-get_viewport().size, get_viewport().size)**
-
+func itemMoving() -> void:   #For moving the items
+		Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)
 		var mouseTile = tilemap.local_to_map(get_global_mouse_position())
 		var local_pos = tilemap.map_to_local(mouseTile)
 		var world_pos = tilemap.to_global(local_pos)
@@ -26,3 +22,4 @@ func itemPlacing() -> void: # for placing items
 		if Input.is_action_just_pressed("LMB"):
 			set_process(false)
 			set_process_unhandled_input(false)
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
