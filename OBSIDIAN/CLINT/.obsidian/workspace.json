@@ -27,9 +27,24 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "239e06951e27d1b0",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "CLINT.canvas",
+                "viewState": {
+                  "x": 2290.1455301455303,
+                  "y": -205.35758835758844,
+                  "zoom": -2.2706377235744406
+                }
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -95,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CLINT/Consuqence Resoults.md",
+                "file": "CLINT.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CLINT/Consuqence Resoults.md",
+                "file": "CLINT.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CLINT/Consuqence Resoults.md"
+                "file": "CLINT.canvas"
               }
             }
           }
@@ -156,11 +171,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "09aedd0f30a844dc",
+  "active": "239e06951e27d1b0",
   "lastOpenFiles": [
-    "CLINT/Camera Movment.md",
-    "CLINT/TO-DO.md",
+    "CLINT/ClintVideos/The Educational System is About to Change..md",
+    "CLINT/ClintVideos/ClintVideos.md",
     "CLINT.canvas",
+    "CLINT/ClintVideos",
+    "CLINT/Camera Movment.md",
+    "2023-09-02.md",
+    "Untitled.canvas",
+    "CLINT/TO-DO.md",
     "CLINT/Consuqence Resoults.md",
     "CLINT/Game Design - Style.md",
     "CLINT/Social Connections.md",

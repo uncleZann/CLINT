@@ -68,7 +68,7 @@ var worldPath2 = "user://world2.tres"
 var worldPath3 = "user://world3.tres"
 
 func _on_load_1_pressed() -> void:
-	ResourceSaver.save(worldData, worldPath1)
+	ResourceLoader.load(worldPath1)
 	Globals.currentWorld = worldPath1
 	change_scene_to_world()
 func _on_start_new_1_pressed() -> void:
@@ -78,7 +78,7 @@ func _on_start_new_1_pressed() -> void:
 	change_scene_to_world()
 
 func _on_load_2_pressed() -> void:
-	ResourceSaver.save(worldData, worldPath2)
+	ResourceLoader.load(worldPath2)
 	Globals.currentWorld = worldPath2
 	change_scene_to_world()
 func _on_start_new_2_pressed() -> void:
@@ -88,7 +88,7 @@ func _on_start_new_2_pressed() -> void:
 	change_scene_to_world()
 
 func _on_load_3_pressed() -> void:
-	ResourceSaver.save(worldData, worldPath3)
+	ResourceLoader.load(worldPath3)
 	Globals.currentWorld = worldPath3
 	change_scene_to_world()
 func _on_start_new_3_pressed() -> void:

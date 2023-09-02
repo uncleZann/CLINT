@@ -8,14 +8,14 @@ var isInEscapeMenu: bool = false #just a var checking if player is in escape men
 func _process(_delta) -> void:
 	if Input.is_action_just_pressed("escape"): #Just checks if escape is pressed
 		if not isInEscapeMenu:
-			$Ui/CanvasLayer/escapeMenu.visible = true
+			$Ui/escapeMenu/escapeMenu.visible = true
 			isInEscapeMenu = true
 		else:
-			$Ui/CanvasLayer/escapeMenu.visible = false
+			$Ui/escapeMenu/escapeMenu.visible = false
 			isInEscapeMenu = false
 
 func _on_escape_menu_resume_pressed() -> void:  #Gets signal from "escapeMenu" and hides it
-	$Ui/EscapeMenu.visible = false
+	$Ui/escapeMenu/escapeMenu.visible = false
 
 func _on_in_game_ui_ui_change(num)  -> void: #Adding items #WIP
 	var item = preload("res://Scenes/Items/placment_item.tscn")

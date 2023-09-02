@@ -54,7 +54,7 @@ func itemSpawner():
 
 func DecisionsSpawner():
 	var questionMark = preload("res://Scenes/Decisions/story_detectors.tscn")
-	for i in 15:
+	for i in 35:
 		var cells = get_used_cells(0)
 		var cellsSize = cells.size()
 		var randomCell = cells[randi_range(1, cellsSize)]

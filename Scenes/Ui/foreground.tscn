@@ -281,6 +281,43 @@ visible_characters = 0
 visible_characters_behavior = 1
 visible_ratio = 0.0
 
+[node name="OutcomesCanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="OutComes" type="Control" parent="OutcomesCanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OutcomesCanvasLayer/OutComes"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -246.0
+offset_top = 116.0
+offset_right = -23.0
+offset_bottom = -83.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="labelONE" type="Label" parent="OutcomesCanvasLayer/OutComes/VBoxContainer"]
+layout_mode = 2
+label_settings = ExtResource("4_wsuwp")
+
+[node name="labelTWO" type="Label" parent="OutcomesCanvasLayer/OutComes/VBoxContainer"]
+layout_mode = 2
+label_settings = ExtResource("4_wsuwp")
+
+[node name="labelTHREE" type="Label" parent="OutcomesCanvasLayer/OutComes/VBoxContainer"]
+layout_mode = 2
+label_settings = ExtResource("4_wsuwp")
+
 [node name="AudioPlayers" type="Node" parent="."]
 
 [node name="heartbeat" type="AudioStreamPlayer2D" parent="AudioPlayers"]

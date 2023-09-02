@@ -65,8 +65,8 @@ script = ExtResource("2_gy5gw")
 [node name="Foreground" parent="Ui" instance=ExtResource("7_wbhek")]
 unique_name_in_owner = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Ui"]
+[node name="escapeMenu" type="CanvasLayer" parent="Ui"]
 
-[node name="escapeMenu" parent="Ui/CanvasLayer" instance=ExtResource("5_cknm8")]
+[node name="escapeMenu" parent="Ui/escapeMenu" instance=ExtResource("5_cknm8")]
 
 [node name="itemsHome" type="Node" parent="."]
