@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1j3462of6mi0"]
+
+[ext_resource type="Script" path="res://Scenes/game_saving.gd" id="1_og00p"]
+
+[node name="GameSaving" type="Node"]
+script = ExtResource("1_og00p")

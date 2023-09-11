@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="itemResource" load_steps=3 format=3 uid="uid://6m5axndcnrjq"]
+
+[ext_resource type="Script" path="res://Resources/ItemResources/itemResourceBase.gd" id="1_5i806"]
+[ext_resource type="Texture2D" uid="uid://bnhgnfcrptw" path="res://VisualResources/Untitled-1.png" id="2_h3ir2"]
+
+[resource]
+script = ExtResource("1_5i806")
+itemName = "Blue"
+spriteTexture = ExtResource("2_h3ir2")

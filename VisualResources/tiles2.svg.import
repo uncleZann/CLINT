@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4upoi23ebr2u"
-path="res://.godot/imported/stump-576907_640.png-2e9ad963cd312f2a4b0d9189301386f6.ctex"
+uid="uid://bfvneaiorsuxo"
+path="res://.godot/imported/tiles2.svg-3dc48bda9577dc9164063f2c8b76f583.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/stump-576907_640.png"
-dest_files=["res://.godot/imported/stump-576907_640.png-2e9ad963cd312f2a4b0d9189301386f6.ctex"]
+source_file="res://VisualResources/tiles2.svg"
+dest_files=["res://.godot/imported/tiles2.svg-3dc48bda9577dc9164063f2c8b76f583.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=0
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

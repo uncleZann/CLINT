@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://ccsu001uhr6dw"]
+[gd_scene load_steps=7 format=3 uid="uid://ccsu001uhr6dw"]
 
 [ext_resource type="Script" path="res://Scenes/Items/base_item.gd" id="1_awnpt"]
 [ext_resource type="FontFile" uid="uid://cxtcx7fhknxo6" path="res://Fonts/extreme.ttf" id="2_ljeul"]
@@ -21,6 +21,13 @@ expand_margin_top = 3.0
 default_font = ExtResource("2_ljeul")
 default_font_size = 23
 Button/styles/normal = SubResource("StyleBoxFlat_lljwy")
+
+[sub_resource type="LabelSettings" id="LabelSettings_j0jjh"]
+font = ExtResource("2_ljeul")
+font_size = 40
+font_color = Color(0.0156863, 1, 0, 1)
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
 
 [node name="BaseItem" type="Node2D"]
 y_sort_enabled = true
@@ -49,5 +56,14 @@ text = "Collect"
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
 position = Vector2(-0.499998, -21)
 scale = Vector2(7.25, 9.1)
+
+[node name="MidLabel" type="Label" parent="."]
+offset_left = -62.0
+offset_top = -62.0
+offset_right = 62.0
+offset_bottom = 62.0
+label_settings = SubResource("LabelSettings_j0jjh")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Collect" to="." method="_on_collect_pressed"]

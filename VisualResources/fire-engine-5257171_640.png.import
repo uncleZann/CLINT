@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2bkgiltnamaf"
-path="res://.godot/imported/plusIcon.png-539c8d64bc5de722b9d8eef3024732bb.ctex"
+uid="uid://c05n02bvsgsif"
+path="res://.godot/imported/fire-engine-5257171_640.png-25050cc42c0b9580fc6b903918837dee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Ui/plusIcon.png"
-dest_files=["res://.godot/imported/plusIcon.png-539c8d64bc5de722b9d8eef3024732bb.ctex"]
+source_file="res://VisualResources/fire-engine-5257171_640.png"
+dest_files=["res://.godot/imported/fire-engine-5257171_640.png-25050cc42c0b9580fc6b903918837dee.ctex"]
 
 [params]
 

@@ -11,6 +11,7 @@ func _ready():
 		var loaded = load(filePath)
 		decisionsDict = loaded.decisionsDict
 		worldData = WorldData.load_or_create(Globals.currentWorld)
+		Globals.worldData = worldData
 	else:
 		#load from web -- WIP
 		print("Your Decisions file is mising")

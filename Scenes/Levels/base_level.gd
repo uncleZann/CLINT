@@ -3,6 +3,7 @@ class_name base_level
 
 func _ready() -> void:
 	Globals.MainPlacmentTilemap = $MainPlacmentTilemap
+	spawnItems()
 
 var isInEscapeMenu: bool = false #just a var checking if player is in escape menu
 func _process(_delta) -> void:
@@ -22,3 +23,8 @@ func _on_in_game_ui_ui_change(num)  -> void: #Adding items #WIP
 	if num == 1:
 		var theitem = item.instantiate()
 		$itemsHome.add_child(theitem)
+
+# CALL DEFAULT FUNCTIONS
+
+func spawnItems():
+	pass

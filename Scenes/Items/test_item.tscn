@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://b03tnpxj54ny1"]
 
 [ext_resource type="PackedScene" uid="uid://ccsu001uhr6dw" path="res://Scenes/Items/base_item.tscn" id="1_ow4dx"]
-[ext_resource type="Texture2D" uid="uid://c4upoi23ebr2u" path="res://Resources/stump-576907_640.png" id="2_1ol1g"]
+[ext_resource type="Texture2D" uid="uid://c4upoi23ebr2u" path="res://VisualResources/stump-576907_640.png" id="2_4vc4u"]
 
 [node name="TestItem" instance=ExtResource("1_ow4dx")]
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="3"]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("2_1ol1g")
+texture = ExtResource("2_4vc4u")

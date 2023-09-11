@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdwhvgl04ason"]
+
+[ext_resource type="PackedScene" uid="uid://ccsu001uhr6dw" path="res://Scenes/Items/base_item.tscn" id="1_7miu0"]
+[ext_resource type="Script" path="res://Scenes/Items/pickup_item.gd" id="2_dy62o"]
+
+[node name="PickupItem" instance=ExtResource("1_7miu0")]
+script = ExtResource("2_dy62o")
+theResource = null
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="3"]

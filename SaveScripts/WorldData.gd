@@ -10,9 +10,9 @@ class_name  WorldData
 @export var health: float
 @export var knowledge: float
 
+@export var itemsForSavingArray: Array
+
 static func load_or_create(path) -> WorldData:
-	
-	#DirAccess.make_dir_absolute(path)
 	var res: WorldData = load(path) as WorldData
 	if !res:
 		res = WorldData.new()

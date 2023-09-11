@@ -1,4 +1,29 @@
-****	GAME SHORT STORY
+
+- [ ] Inspire people, talk about the isseues i deal with (overthinking, gamedev.......)
+- [ ] the things i hate about my self is my personality, embrace it:     80-good side, 20%-embrace it
+
+- [ ] Make the game look half decent
+      https://forum.unity.com/threads/2d-top-down-game-best-practices.233809/
+
+- [ ] Setup Inventory
+	- [ ] Items - Ui, not movable, just a visual represintation of what you have
+	- [ ] Skills - Numbers only
+
+- [ ] set up Home World
+	- [ ] Building
+	- [ ] Making resources/money
+	- [ ] ...
+
+- [ ] Add 4 decision options
+- [ ] Make Health-longterm
+- [ ] add Animals
+- [ ] add Shooting
+- [ ] add Enemies
+
+
+# IDEAS
+
+	GAME SHORT STORY:
 	You are trying to build a new linux operating system, and the operating systems basicly host the world and everyone in it... so you are competing with other non-open-source worlds to get people to yours where you are not controlled and drugged by the big rich cooperations, you can visit other worlds/systems which feel apart or were poisned by the rich... in order to get people to use your system/world you have to build you human reputation - cauze that's what makes you uniqe and makes people like you, but you also have to collect money and resources to upgrade your servers, and be able to host more people. Making mistakes will cauze you to loose reputation and people... in the systems/worlds universe there is a stock market, so chosing your ways of storing value is important. You have to keep in mind, that you are still a human and you have to eat, drink and so on, This game is all about making decision, so be carefull about everything you do, if you eat a very proccesed meal, in long term that will lower you health and that directly effects your world! you and your operating system are one, so when you loose health so does the system, i dont want to bore you with my shitty writing anymore, but best of luck!
  
 	 Design:

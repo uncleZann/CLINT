@@ -3,6 +3,9 @@ extends Node
 signal gloablsChange
 
 var currentWorld
+var worldData
+
+var itemsForSavingArray: Array
 
 # Ignore ------------- Ignore ------------- Ignore ------------- Ignore
 var worldExist1: bool
@@ -25,6 +28,8 @@ func load_data() -> void:
 
 
 # Just Globals --- No Saving! ----------------- Just Globals --- No Saving!
+
+var cameraPosition
 
 signal colisionDetectedSignal   # For Decisions V
 var colisionDetected: String:

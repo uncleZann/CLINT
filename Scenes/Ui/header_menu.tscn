@@ -1,15 +1,43 @@
-[gd_scene load_steps=12 format=3 uid="uid://dp2l3c7jgfrtv"]
+[gd_scene load_steps=21 format=3 uid="uid://dp2l3c7jgfrtv"]
 
 [ext_resource type="Theme" uid="uid://c6qj4gpqpe15" path="res://Themes/mainTextTheme.tres" id="1_qip66"]
 [ext_resource type="Script" path="res://Scenes/Ui/header_menu.gd" id="1_scvom"]
-[ext_resource type="Texture2D" uid="uid://bdlj355pl5sq" path="res://Resources/Ui/headerIcon.png" id="1_wixyp"]
-[ext_resource type="Texture2D" uid="uid://c2bkgiltnamaf" path="res://Resources/Ui/plusIcon.png" id="2_cw0f7"]
-[ext_resource type="Texture2D" uid="uid://cq3h00iij7u4e" path="res://Resources/Ui/searchIcon.png" id="3_d4jcr"]
-[ext_resource type="Texture2D" uid="uid://bqo1ddkw3r5ul" path="res://Resources/Ui/menuIcon.png" id="4_3p8ja"]
-[ext_resource type="Texture2D" uid="uid://df1jpiaqte244" path="res://Resources/Ui/minusIcon.png" id="5_0hkos"]
+[ext_resource type="FontFile" uid="uid://cr8hbc358sdu8" path="res://Fonts/UbuntuMono/UbuntuMono-Italic.ttf" id="2_mjcvn"]
+[ext_resource type="PackedScene" uid="uid://cc0kyu4bj8o4o" path="res://Scenes/Ui/item_container_button.tscn" id="2_rm7y3"]
+[ext_resource type="FontFile" uid="uid://bbqhkqpy50ed5" path="res://Fonts/UbuntuMono/UbuntuMono-Bold.ttf" id="3_dgxh6"]
+[ext_resource type="LabelSettings" uid="uid://dk7hqx26qf62a" path="res://Themes/Default_UMONO_Font.tres" id="3_n7mh8"]
 [ext_resource type="FontFile" uid="uid://8bksfvxx3q6x" path="res://Fonts/UbuntuMono/UbuntuMono-Regular.ttf" id="5_m1hhl"]
-[ext_resource type="Texture2D" uid="uid://6wp1cmw8pwfl" path="res://Resources/Ui/fullscreenIcon.png" id="6_s2tgy"]
-[ext_resource type="Texture2D" uid="uid://b42446r51snbx" path="res://Resources/Ui/closeIcon.png" id="7_l7mrh"]
+[ext_resource type="Texture2D" uid="uid://bdlj355pl5sq" path="res://VisualResources/Ui/headerIcon.png" id="5_yf6ii"]
+[ext_resource type="Texture2D" uid="uid://c2bkgiltnamaf" path="res://VisualResources/Ui/plusIcon.png" id="6_2k2du"]
+[ext_resource type="Texture2D" uid="uid://cq3h00iij7u4e" path="res://VisualResources/Ui/searchIcon.png" id="7_i7jdc"]
+[ext_resource type="Texture2D" uid="uid://bqo1ddkw3r5ul" path="res://VisualResources/Ui/menuIcon.png" id="8_5gu0h"]
+[ext_resource type="Texture2D" uid="uid://df1jpiaqte244" path="res://VisualResources/Ui/minusIcon.png" id="9_a1g4x"]
+[ext_resource type="Texture2D" uid="uid://6wp1cmw8pwfl" path="res://VisualResources/Ui/fullscreenIcon.png" id="10_n755v"]
+[ext_resource type="Texture2D" uid="uid://b42446r51snbx" path="res://VisualResources/Ui/closeIcon.png" id="11_1oepm"]
+
+[sub_resource type="Theme" id="Theme_6h0uv"]
+GridContainer/constants/h_separation = 4
+GridContainer/constants/v_separation = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_pxn13"]
+font = ExtResource("2_mjcvn")
+font_size = 15
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_euic7"]
+font = ExtResource("3_dgxh6")
+font_size = 25
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tqti1"]
+font = ExtResource("3_dgxh6")
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ngpqv"]
+font = ExtResource("3_dgxh6")
+font_size = 20
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Theme" id="Theme_f7iv8"]
 default_font = ExtResource("5_m1hhl")
@@ -18,68 +46,309 @@ default_font_size = 18
 [node name="HeaderMenu" type="CanvasLayer"]
 script = ExtResource("1_scvom")
 
-[node name="Default" type="Control" parent="."]
+[node name="PlacmentUi" type="Control" parent="."]
 visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 82.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 
-[node name="ColorRect" type="ColorRect" parent="Default"]
+[node name="MainBackground" type="ColorRect" parent="PlacmentUi"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -9.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 1
-color = Color(0, 0, 0, 0.423529)
+color = Color(0, 0, 0, 0.690196)
 
-[node name="Bottom" type="HBoxContainer" parent="Default/ColorRect"]
-layout_mode = 2
-offset_left = 50.0
-offset_top = 47.0
-offset_right = 1102.0
-offset_bottom = 546.0
+[node name="HBoxContainer" type="HBoxContainer" parent="PlacmentUi/MainBackground"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = 101.0
+offset_right = -25.0
+offset_bottom = -30.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_vertical = 3
-theme_override_constants/separation = 100
+theme_override_constants/separation = 10
 alignment = 1
 
-[node name="ColorRect" type="ColorRect" parent="Default/ColorRect/Bottom"]
+[node name="LeftMain" type="ColorRect" parent="PlacmentUi/MainBackground/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-mouse_filter = 1
+size_flags_stretch_ratio = 2.93
+color = Color(0.235294, 0.384314, 0.333333, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Default/ColorRect/Bottom/ColorRect"]
+[node name="InsideLeftMain" type="ColorRect" parent="PlacmentUi/MainBackground/HBoxContainer/LeftMain"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = 11.0
+offset_right = -11.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.47
+color = Color(0.380392, 0.529412, 0.431373, 1)
+
+[node name="ItemsGridContainer" type="GridContainer" parent="PlacmentUi/MainBackground/HBoxContainer/LeftMain/InsideLeftMain"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 13.0
+offset_right = -21.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_6h0uv")
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 6
+
+[node name="ItemContainerButton" parent="PlacmentUi/MainBackground/HBoxContainer/LeftMain/InsideLeftMain/ItemsGridContainer" instance=ExtResource("2_rm7y3")]
+layout_mode = 2
+
+[node name="RightSide" type="ColorRect" parent="PlacmentUi/MainBackground/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.235294, 0.384314, 0.333333, 1)
+
+[node name="RightSide2" type="ColorRect" parent="PlacmentUi/MainBackground/HBoxContainer/RightSide"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = 11.0
+offset_right = -12.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+color = Color(0.380392, 0.529412, 0.431373, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PlacmentUi/MainBackground/HBoxContainer/RightSide/RightSide2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 8.0
+offset_right = -11.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="ItemName" type="ColorRect" parent="PlacmentUi/MainBackground/HBoxContainer/RightSide/RightSide2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.65098, 0.733333, 0.552941, 1)
+
+[node name="Label" type="Label" parent="PlacmentUi/MainBackground/HBoxContainer/RightSide/RightSide2/VBoxContainer/ItemName"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+text = " name:"
+label_settings = SubResource("LabelSettings_pxn13")
+autowrap_mode = 3
 
-[node name="Button" type="Button" parent="Default/ColorRect/Bottom/ColorRect/VBoxContainer"]
+[node name="ItemNameLabel" type="Label" parent="PlacmentUi/MainBackground/HBoxContainer/RightSide/RightSide2/VBoxContainer/ItemName"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Some Name"
+label_settings = SubResource("LabelSettings_euic7")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Price" type="ColorRect" parent="PlacmentUi/MainBackground/HBoxContainer/RightSide/RightSide2/VBoxContainer"]
 layout_mode = 2
-mouse_filter = 1
+size_flags_vertical = 3
+color = Color(0.65098, 0.733333, 0.552941, 1)
+
+[node name="Label" type="Label" parent="PlacmentUi/MainBackground/HBoxContainer/RightSide/RightSide2/VBoxContainer/Price"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = " price:"
+label_settings = SubResource("LabelSettings_pxn13")
+autowrap_mode = 3
+
+[node name="PriceLabel" type="Label" parent="PlacmentUi/MainBackground/HBoxContainer/RightSide/RightSide2/VBoxContainer/Price"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "17.99$"
+label_settings = SubResource("LabelSettings_euic7")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Stats" type="ColorRect" parent="PlacmentUi/MainBackground/HBoxContainer/RightSide/RightSide2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.98
+color = Color(0.65098, 0.733333, 0.552941, 1)
+
+[node name="Label" type="Label" parent="PlacmentUi/MainBackground/HBoxContainer/RightSide/RightSide2/VBoxContainer/Stats"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = " stats:"
+label_settings = SubResource("LabelSettings_pxn13")
+autowrap_mode = 3
+
+[node name="StatsLabel" type="Label" parent="PlacmentUi/MainBackground/HBoxContainer/RightSide/RightSide2/VBoxContainer/Stats"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 21.0
+offset_right = -8.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "-new stat
+-another stat
+-one more"
+label_settings = SubResource("LabelSettings_tqti1")
+autowrap_mode = 3
+
+[node name="Description" type="ColorRect" parent="PlacmentUi/MainBackground/HBoxContainer/RightSide/RightSide2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.1
+color = Color(0.65098, 0.733333, 0.552941, 1)
+
+[node name="Label" type="Label" parent="PlacmentUi/MainBackground/HBoxContainer/RightSide/RightSide2/VBoxContainer/Description"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = " description:"
+label_settings = SubResource("LabelSettings_pxn13")
+autowrap_mode = 3
+
+[node name="DescriptionLabel" type="Label" parent="PlacmentUi/MainBackground/HBoxContainer/RightSide/RightSide2/VBoxContainer/Description"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 21.0
+offset_right = -8.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "this shit is really cool cauze it does some cool shit"
+label_settings = SubResource("LabelSettings_ngpqv")
+autowrap_mode = 3
+
+[node name="Inventory" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Inventory"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.87451)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Inventory/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = 31.0
+offset_right = -25.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stats" type="VBoxContainer" parent="Inventory/ColorRect/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="playerCash" type="Label" parent="Inventory/ColorRect/HBoxContainer/Stats"]
+layout_mode = 2
+label_settings = ExtResource("3_n7mh8")
+
+[node name="playerGold" type="Label" parent="Inventory/ColorRect/HBoxContainer/Stats"]
+layout_mode = 2
+label_settings = ExtResource("3_n7mh8")
+
+[node name="playerReputation" type="Label" parent="Inventory/ColorRect/HBoxContainer/Stats"]
+layout_mode = 2
+label_settings = ExtResource("3_n7mh8")
+
+[node name="socialconnections" type="Label" parent="Inventory/ColorRect/HBoxContainer/Stats"]
+layout_mode = 2
+label_settings = ExtResource("3_n7mh8")
+
+[node name="fitnesslevel" type="Label" parent="Inventory/ColorRect/HBoxContainer/Stats"]
+layout_mode = 2
+label_settings = ExtResource("3_n7mh8")
+
+[node name="health" type="Label" parent="Inventory/ColorRect/HBoxContainer/Stats"]
+layout_mode = 2
+label_settings = ExtResource("3_n7mh8")
+
+[node name="knowledge" type="Label" parent="Inventory/ColorRect/HBoxContainer/Stats"]
+layout_mode = 2
+label_settings = ExtResource("3_n7mh8")
+
+[node name="Other" type="VBoxContainer" parent="Inventory/ColorRect/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BuildMenu" type="Button" parent="Inventory/ColorRect/HBoxContainer/Other"]
+layout_mode = 2
 theme = ExtResource("1_qip66")
-text = "number 1"
-
-[node name="ColorRect2" type="ColorRect" parent="Default/ColorRect/Bottom"]
-layout_mode = 2
-size_flags_horizontal = 3
-mouse_filter = 1
-
-[node name="ColorRect3" type="ColorRect" parent="Default/ColorRect/Bottom"]
-layout_mode = 2
-size_flags_horizontal = 3
-mouse_filter = 1
+text = "Build menu"
 
 [node name="Header" type="Control" parent="."]
 layout_mode = 3
@@ -115,8 +384,36 @@ anchor_bottom = 1.0
 offset_right = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_wixyp")
+texture = ExtResource("5_yf6ii")
 expand_mode = 2
+
+[node name="REPUTATIONBAR" type="TextureRect" parent="Header"]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 150.0
+offset_top = 77.09
+offset_right = -149.0
+offset_bottom = 19.09
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_yf6ii")
+expand_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="Header/REPUTATIONBAR"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 10.0
+value = 1.0
+show_percentage = false
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Header"]
 layout_mode = 1
@@ -140,7 +437,8 @@ size_flags_stretch_ratio = 0.07
 
 [node name="plusButton" type="Button" parent="Header/HBoxContainer/PlusMarginContainer"]
 layout_mode = 2
-icon = ExtResource("2_cw0f7")
+mouse_default_cursor_shape = 2
+icon = ExtResource("6_2k2du")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -161,7 +459,8 @@ size_flags_stretch_ratio = 0.07
 
 [node name="searchButton" type="Button" parent="Header/HBoxContainer/SearchMarginContainer"]
 layout_mode = 2
-icon = ExtResource("3_d4jcr")
+mouse_default_cursor_shape = 2
+icon = ExtResource("7_i7jdc")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -173,7 +472,8 @@ size_flags_stretch_ratio = 0.07
 
 [node name="menuButton" type="Button" parent="Header/HBoxContainer/menuMarginContainer"]
 layout_mode = 2
-icon = ExtResource("4_3p8ja")
+mouse_default_cursor_shape = 2
+icon = ExtResource("8_5gu0h")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -190,7 +490,8 @@ size_flags_stretch_ratio = 0.06
 
 [node name="minusButton" type="Button" parent="Header/HBoxContainer/minusMarginContainer"]
 layout_mode = 2
-icon = ExtResource("5_0hkos")
+mouse_default_cursor_shape = 2
+icon = ExtResource("9_a1g4x")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -208,7 +509,8 @@ size_flags_stretch_ratio = 0.06
 [node name="screenButton" type="Button" parent="Header/HBoxContainer/screenMarginContainer"]
 layout_mode = 2
 focus_mode = 0
-icon = ExtResource("6_s2tgy")
+mouse_default_cursor_shape = 2
+icon = ExtResource("10_n755v")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -225,12 +527,19 @@ size_flags_stretch_ratio = 0.07
 
 [node name="closeButton" type="Button" parent="Header/HBoxContainer/closeMarginContainer"]
 layout_mode = 2
-icon = ExtResource("7_l7mrh")
+mouse_default_cursor_shape = 2
+icon = ExtResource("11_1oepm")
 flat = true
 icon_alignment = 1
 expand_icon = true
 
-[connection signal="pressed" from="Default/ColorRect/Bottom/ColorRect/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[node name="UpdateStatsTimer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="hideUI" from="PlacmentUi/MainBackground/HBoxContainer/LeftMain/InsideLeftMain/ItemsGridContainer/ItemContainerButton" to="." method="_on_item_container_button_hide_ui"]
+[connection signal="pressed" from="Inventory/ColorRect/HBoxContainer/Other/BuildMenu" to="." method="_on_build_menu_pressed"]
 [connection signal="pressed" from="Header/HBoxContainer/menuMarginContainer/menuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="Header/HBoxContainer/screenMarginContainer/screenButton" to="." method="_on_screen_button_pressed"]
 [connection signal="pressed" from="Header/HBoxContainer/closeMarginContainer/closeButton" to="." method="_on_close_button_pressed"]
+[connection signal="timeout" from="UpdateStatsTimer" to="." method="_on_update_stats_timer_timeout"]

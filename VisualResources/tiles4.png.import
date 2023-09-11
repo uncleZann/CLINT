@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d8812rc3ld8y"
-path="res://.godot/imported/QuestionMark.svg-b9c419377726f36b9fb47ff392648854.ctex"
+uid="uid://nfm0j4pdmcwr"
+path="res://.godot/imported/tiles4.png-04d04047f9e83d10f7e11771c1c3c07f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/QuestionMark.svg"
-dest_files=["res://.godot/imported/QuestionMark.svg-b9c419377726f36b9fb47ff392648854.ctex"]
+source_file="res://VisualResources/tiles4.png"
+dest_files=["res://.godot/imported/tiles4.png-04d04047f9e83d10f7e11771c1c3c07f.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=0
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

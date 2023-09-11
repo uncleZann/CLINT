@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1h2we7no413j"
-path="res://.godot/imported/layOver.png-107f17f146fff64b56640e28d88b5bd8.ctex"
+path="res://.godot/imported/layOver.png-6a5b8c7570ceb203d66cbfd7a0001f04.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Ui/layOver.png"
-dest_files=["res://.godot/imported/layOver.png-107f17f146fff64b56640e28d88b5bd8.ctex"]
+source_file="res://VisualResources/Ui/layOver.png"
+dest_files=["res://.godot/imported/layOver.png-6a5b8c7570ceb203d66cbfd7a0001f04.ctex"]
 
 [params]
 

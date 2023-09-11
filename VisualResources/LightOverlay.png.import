@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvyb531id882n"
-path="res://.godot/imported/LightOverlay.png-ef3cb9fd5795cbc6774626ab1e1c4dfe.ctex"
+path="res://.godot/imported/LightOverlay.png-c96b10a6142b7fc630096ea0bb7b093e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/LightOverlay.png"
-dest_files=["res://.godot/imported/LightOverlay.png-ef3cb9fd5795cbc6774626ab1e1c4dfe.ctex"]
+source_file="res://VisualResources/LightOverlay.png"
+dest_files=["res://.godot/imported/LightOverlay.png-c96b10a6142b7fc630096ea0bb7b093e.ctex"]
 
 [params]
 

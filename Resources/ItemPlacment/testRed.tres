@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="itemPlacment" load_steps=3 format=3 uid="uid://dbq7twrepc2of"]
+
+[ext_resource type="Script" path="res://Resources/ItemPlacment/ItemPlacmentBase.gd" id="1_tqfix"]
+[ext_resource type="Texture2D" uid="uid://f2mprirm3cr1" path="res://VisualResources/testPlacmentItemTexture.png" id="2_mvqy2"]
+
+[resource]
+script = ExtResource("1_tqfix")
+itemName = "testRed"
+spriteTexture = ExtResource("2_mvqy2")

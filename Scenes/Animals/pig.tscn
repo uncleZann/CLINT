@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cg41rvqjh1h3y"]
 
 [ext_resource type="Script" path="res://Scenes/Animals/pig.gd" id="1_jnqvg"]
-[ext_resource type="Texture2D" uid="uid://dx1cw6eca78kh" path="res://Resources/Pig.png" id="1_xefsm"]
+[ext_resource type="Texture2D" uid="uid://dx1cw6eca78kh" path="res://VisualResources/Pig.png" id="1_xefsm"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rdj7l"]
 radius = 33.0

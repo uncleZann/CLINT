@@ -21,6 +21,7 @@ Globals="*res://Scripts/Globals.gd"
 
 [display]
 
+window/size/borderless=true
 window/vsync/vsync_mode=0
 
 [importer_defaults]

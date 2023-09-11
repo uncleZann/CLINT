@@ -3,8 +3,8 @@ extends TileMap #For world gen, and spawning
 var moisture = FastNoiseLite.new()
 var temperature = FastNoiseLite.new()
 var altitude = FastNoiseLite.new()
-var width =  200
-var height =  200
+var width =  400
+var height =  400
 
 func _ready():
 	moisture.seed = randi()
@@ -32,8 +32,10 @@ func generate_chunk():
 
 var usedPlacmentPoints: Array = []
 
+var avaiableResources = ["res://Resources/ItemResources/treeResource.tres", "res://Resources/ItemResources/testOne.tres"]
+
 func itemSpawner():
-	var item = preload("res://Scenes/Items/test_item.tscn")
+	var item = preload("res://Scenes/Items/pickup_item.tscn")
 	for i in 600:
 		var cells = get_used_cells(0)
 		var cellsSize = cells.size()
@@ -49,6 +51,9 @@ func itemSpawner():
 				if not itemPosition in usedPlacmentPoints:
 					var theItem = item.instantiate()
 					theItem.position = itemPosition
+					
+					theItem.theResource = load(avaiableResources[randi_range(0, avaiableResources.size() - 1)])
+					
 					owner.add_child.call_deferred(theItem)
 					usedPlacmentPoints.append(itemPosition)
 

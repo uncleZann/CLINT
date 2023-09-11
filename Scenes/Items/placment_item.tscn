@@ -2,11 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://ccsu001uhr6dw" path="res://Scenes/Items/base_item.tscn" id="1_atdab"]
 [ext_resource type="Script" path="res://Scenes/Items/placment_item.gd" id="2_nuwpj"]
-[ext_resource type="Texture2D" uid="uid://c05n02bvsgsif" path="res://Resources/fire-engine-5257171_640.png" id="3_6m5a0"]
+[ext_resource type="Resource" uid="uid://dbq7twrepc2of" path="res://Resources/ItemPlacment/testRed.tres" id="3_14t0l"]
 
 [node name="TestItem" instance=ExtResource("1_atdab")]
 script = ExtResource("2_nuwpj")
+theResource = ExtResource("3_14t0l")
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="3"]
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("3_6m5a0")
+
+[node name="ResourceProductionTimer" type="Timer" parent="." index="4"]
+autostart = true
+
+[connection signal="timeout" from="ResourceProductionTimer" to="." method="_on_timer_timeout"]
